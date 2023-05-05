@@ -1,5 +1,6 @@
-// @import './common';
-// @import './utils/variables';
+// @import './utils/normalise'; // я бачу що вже з node підтягується, можу видалити
+@import './components/common';
+@import './utils/variables';
 // @import './header';
 // @import './sidebar';
 // @import './support';
