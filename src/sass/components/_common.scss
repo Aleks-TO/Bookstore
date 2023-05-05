@@ -1,1 +1,59 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import '../utils/variables';
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "DM Sans", sans-serif;
+    src: url("../fonts/DMSans-Regular.ttf"), url("../fonts/DMSans-Italic.ttf"), url("../fonts/DMSans-Medium.ttf"),
+        url("../fonts/DMSans-Bold.ttf");
+}
+
+
+body{
+    font-family: "DM Sans", sans-serif;
+    background-color: $color-background-grey;
+    color: $color-dark;
+}
+
+
+// COMPONENTS
+
+.button {
+    padding: 14px 28px;
+
+    background-color: inherit;
+    border: 2px solid $color-accent-purple;
+    border-radius: 40px;
+
+    color: $color-dark;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    transition: all 400ms ease-out;
+}
+
+.button:hover, .button:focus{
+    background-color: $color-accent-purple;
+    color: $color-light;
+}
+
+.dark-theme{
+    background-color: $color-background-dark;
+    color: $color-light;
+}
