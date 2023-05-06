@@ -1,1 +1,1 @@
-// import './JS/support_Ukraine.js';
+import './JS/support_Ukraine.js';
