@@ -23,6 +23,10 @@ body {
   padding-left: 24px;
 }
 // Общ_____________________________________________________________
+.bestseller-category-card-set {
+  outline: solid 3px cyan;
+  
+}
 .bestseller-container a {
 text-decoration: none;
 }
@@ -145,7 +149,7 @@ border-radius: 0px 0px 8px 8px;
 .bestseller-card-thumb {
   position: relative;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .bestseller-container {
     padding-left: 40px;
     padding-right: 24px;
@@ -164,7 +168,11 @@ border-radius: 0px 0px 8px 8px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .bestseller-category-card-set {
+    max-width: 704px;
+  } 
+  
   .bestseller-container {
     padding-left: 32px;
     padding-right: 32px;
