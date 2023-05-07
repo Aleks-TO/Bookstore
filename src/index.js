@@ -38,7 +38,7 @@ function renderMarkupBestseller(topBooks) {
         markup =
           markup +
           `               
-            <li class="card-set-item" id="${_id}">
+            <li class="card-set-item" data-bookid="${_id}">
               <a href="" class="bestseller-card-link">
                 <article class="bestseller-card">
                   <div class="bestseller-card-thumb">
@@ -59,11 +59,7 @@ function renderMarkupBestseller(topBooks) {
           markup =
             markup +
             `</ul>
-                     <div class="bestseller-button-container" >
-                        <a href="" class="bestseller-see-more" id="${_id}">see more</a>
-          
-                      </div>
-          
+                     <div class="be 
                     </div>`;
         }
 
@@ -74,4 +70,13 @@ function renderMarkupBestseller(topBooks) {
   });
   refs.bestsellerContainer.innerHTML = markup
 }
+function onClickBestseller(event) {
+  event.preventDefault();
+  // if (event.target.nodeName !== "BUTTON" || event.target.nodeName !=="") {
+  //   return;
+  // }
+  console.dir(event.target.parentElement.parentElement.parentElement)
+  // console.dir(event.target.parentElement.parentElement.parentElement.parentElement.dataset.bookid)
+}
 getListTopBooks();
+refs.bestsellerContainer.addEventListener("click",onClickBestseller)
