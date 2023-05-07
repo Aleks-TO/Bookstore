@@ -36,11 +36,18 @@
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/header.html"></include>
-    <include src="./partials/sidebar.html"></include>
-    <include src="./partials/support.html"></include>
-    <include src="./partials/bestseller.html"></include>
+
+    <main>
+      <section class="sidebar-left">
+        <include src="./partials/sidebar.html"></include>
+        <include src="./partials/support.html"></include>
+      </section>
+      <section class="bestseller-right">
+        <include src="./partials/bestseller.html"></include>
+      </section>
+    </main>
+
     <include src="./partials/modal-book-info.html"></include>
-    <!-- <include src="./partials/example.html"></include> -->
     <script type="module" src="./index.js"></script>
   </body>
 </html>
