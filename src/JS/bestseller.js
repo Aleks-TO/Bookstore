@@ -38,7 +38,7 @@ function renderMarkupBestseller(topBooks) {
         markup =
           markup +
           `               
-            <li class="card-set-item" data-bookid="${_id}">
+            <li class="card-set-item">
               <a href="" class="bestseller-card-link">
                 <article class="bestseller-card">
                   <div class="bestseller-card-thumb">
@@ -50,7 +50,7 @@ function renderMarkupBestseller(topBooks) {
     
                   <div class="bestseller-card-content">
                     <p class="bestseller-book-name">${title}</p>
-                    <p class="bestseller-author" data-parid="bambarbia">${author}</p>
+                    <p class="bestseller-author id-pointer" data-bookid="${_id}">${author}</p>
                   </div>
                 </article>
               </a>
@@ -60,7 +60,7 @@ function renderMarkupBestseller(topBooks) {
             markup +
             `</ul>
                      <div class="bestseller-button-container">
-      <a href="" class="bestseller-see-more" data-buttonid="${_id}">see more</a>
+      <a href="" class="bestseller-see-more list-name-pointer" data-buttonid="${list_name}">see more</a>
       </div>
       </div>`;
         }
@@ -74,15 +74,21 @@ function renderMarkupBestseller(topBooks) {
   refs.bestsellerContainer.innerHTML = markup
 }
 function onClickBestseller(event) {
-  event.preventDefault();
-  // if (event.target.nodeName !== "BUTTON" || event.target.nodeName !=="") {
-  //   return;
-  // }
-  let link= event.target.parentElement.parentElement.parentElement
-  
+    event.preventDefault();
+    const eventTarget = event.target.parentElement.parentElement.parentElement
+    const isBookClicked = eventTarget.classList.contains("bestseller-card-link") || eventTarget.classList.contains("bestseller-category-card-set") || eventTarget.classList.contains("card-set-item") || eventTarget.classList.contains("bestseller-card")
+    const isButtonClicked = event.target.classList.contains("bestseller-see-more")
+    let bookId= eventTarget.querySelector(".id-pointer").dataset.bookid
+    let listName=event.target.dataset.buttonid
 
-console.dir(link)
-  // console.dir(event.target.parentElement.parentElement.parentElement.parentElement.dataset.bookid)
+        
+  if (!(isBookClicked||isButtonClicked)) {
+    return;
+  }
+  if (isBookClicked) {console.log(bookId)};
+  if (isButtonClicked) {console.log(listName)}
+
+
 }
 getListTopBooks();
 refs.bestsellerContainer.addEventListener("click",onClickBestseller)
