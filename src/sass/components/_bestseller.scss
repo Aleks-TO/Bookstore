@@ -1,32 +1,52 @@
 
 
 
-body {
+.container {
   max-width: 1440px;
+  display: flex;
+  padding-left: 24px;
+  border: solid 2px palevioletred;
 }
 .header{
     width: 1440px;
     height: 72px;
-    outline: 5px solid red;
+    border: 5px solid red;
     margin-bottom: 40px;
 }
-.aside{
+.bestseller-container {
+  border: solid 2px brown ;
+}
+.sidebar-left{
     width: 356px;
     min-width: 356px;
-    outline: 5px solid green;
+    border: 5px solid green;
     height: 2000px;
 }
-
-
-.com {
-  display: flex;
-  padding-left: 24px;
+@media screen and (max-width: 767px){
+  .sidebar-left {
+    height: 620px;
+  }
+  .container {
+    display: block;
+  }
 }
-// Общ_____________________________________________________________
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  
+.sidebar-left {
+  height: 472px;
+}
+.container {
+  display: block;
+}
+
+}
 .bestseller-category-card-set {
   outline: solid 3px cyan;
   
 }
+
+// Общ_____________________________________________________________
+
 .bestseller-container a {
 text-decoration: none;
 }
@@ -46,6 +66,8 @@ text-decoration: none;
 }
 .bestseller-category {
   margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
  .bestseller-see-more {
   display: inline-block;
@@ -169,7 +191,7 @@ border-radius: 0px 0px 8px 8px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .bestseller-category-card-set {
+  .bestseller-category {
     max-width: 704px;
   } 
   
@@ -196,6 +218,9 @@ display: none;
 }
 
 @media screen and (max-width: 767px) {
+  .bestseller-category {
+    max-width: 335px;
+  } 
   .bestseller-container {
     padding-left: 20px;
     padding-right: 20px;
