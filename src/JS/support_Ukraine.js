@@ -46,13 +46,13 @@ const supportUkraine = [
   },
 ];
 
-const olEl = document.querySelector('.ol');
+const olEl = document.querySelector('.support_Ukraine_ol');
 const bntEl = document.querySelector('.support_Ukraine_bnt');
 
 function renderList(supportUkraine) {
   const mappedArray = supportUkraine
     .map(({ title, url, img }) => {
-      return `<li><a href="${url}" target="_blank"><img
+      return `<li class='support_Ukraine_list_ol'><a href="${url}" target="_blank"><span class='support_Ukraine_num '>01</span><img
             src="${img}"
             alt="${title}"
             class="support__img"
@@ -67,7 +67,7 @@ renderList(supportUkraine);
 let offset = 0;
 bntEl.addEventListener('click', onClickBnt);
 function onClickBnt() {
-  offset += 56;
+  offset += 52;
   if (offset > 280 && screen.availWidth <= 375) {
     offset = 0;
   } else if (offset > 180 && screen.availWidth > 375) {
@@ -75,3 +75,10 @@ function onClickBnt() {
   }
   olEl.style.bottom = offset + 'px';
 }
+const spanEl = document.querySelectorAll('.support_Ukraine_num ');
+
+spanEl.forEach((el, i) => {
+  const num = i + 1;
+  // console.log(num);
+  el.textContent = '0' + num;
+});
