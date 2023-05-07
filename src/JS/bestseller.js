@@ -1,5 +1,30 @@
 const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
 // import './JS/support_Ukraine.js'
+ async function fetchBookById(id) {
+  const response = await fetch(`https://books-backend.p.goit.global/books/${id}`);
+  const book = await response.json();
+  
+  return book;
+};
+
+async function getBookByid(id)  {
+  try {
+    const book = await fetchBookById(id);
+    console.log(book);
+   
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+
+
+
+
+
+
+
+
 const fetchTopBooks = async () => {
   const response = await fetch(
     'https://books-backend.p.goit.global/books/top-books'
@@ -85,9 +110,11 @@ function onClickBestseller(event) {
   if (!(isBookClicked||isButtonClicked)) {
     return;
   }
-  if (isBookClicked) {console.log(bookId)};
+  if (isBookClicked) {
+     getBookByid(bookId)
+  };
   if (isButtonClicked) {console.log(listName)}
-
+  
 
 }
 getListTopBooks();
