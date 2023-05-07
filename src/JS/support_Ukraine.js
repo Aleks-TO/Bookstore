@@ -2,7 +2,7 @@ const supportUkraine = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: './images/icons-img/save-the-children.png',
+    img: './images/icons-img/save-the-children.svg',
   },
   {
     title: 'Project HOPE',
@@ -68,7 +68,9 @@ let offset = 0;
 bntEl.addEventListener('click', onClickBnt);
 function onClickBnt() {
   offset += 56;
-  if (offset > 300) {
+  if (offset > 280 && screen.availWidth <= 375) {
+    offset = 0;
+  } else if (offset > 180 && screen.availWidth > 375) {
     offset = 0;
   }
   olEl.style.bottom = offset + 'px';
