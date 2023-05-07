@@ -1,4 +1,4 @@
-.ol {
+.support_Ukraine_ol {
     margin: 0;
     position: relative;
     padding: 0;
@@ -26,11 +26,17 @@
     }
 }
 
-.title {
+.support_Ukraine_title_emblem {
     position: relative;
 }
 
 .support_Ukraine_title {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
     margin-top: 0;
     padding-top: 24px;
     margin-bottom: 40px;
@@ -39,7 +45,7 @@
     color: white;
 }
 
-.icons-img {
+.support_Ukraine_icons-img {
     position: absolute;
     top: 24px;
     left: 250px;
@@ -87,7 +93,7 @@
     margin-left: 40px;
     width: 159px;
     height: 188px;
-    border: 2px solid rgb(6, 6, 6);
+    /* border: 2px solid rgb(6, 6, 6); */
     overflow: hidden;
 }
 
@@ -98,8 +104,30 @@
 }
 
 .support__img {
+    padding-left: 28px;
     max-width: 115px;
     max-height: 32px;
     margin-bottom: 20px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(350%) contrast(500%);
+}
+
+/* .support__img:hover {
+
+} */
+
+.support_Ukraine_list_ol {
+    position: relative;
+}
+
+.support_Ukraine_num {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: translateY(-20px);
+    color: #ffffff;
 }
