@@ -140,6 +140,12 @@
 .burger-menu {
   display: none;
   opacity: 0;
+  overflow: hidden;
+}
+
+.modal-menu {
+  display: none;
+  opacity: 0;
 
   svg {
     stroke: #000;
@@ -189,6 +195,12 @@
     opacity: 0;
     overflow: hidden;
   }
+  .burger-menu {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+  }
+
   .modal-menu {
     display: none;
     opacity: 0;
@@ -234,7 +246,8 @@
 
   .burger-menu {
     display: block;
-    opacity: 1;
+    width: 28px;
+    height: 28px;
     margin: 18px 20px 18px 0px;
   }
   /* Анімація плавного чекбоксу "запам'ятовування" */
