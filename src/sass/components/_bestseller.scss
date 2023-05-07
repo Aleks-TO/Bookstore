@@ -1,59 +1,6 @@
-html {
-  scroll-behavior: smooth;
-}
 
 
 
-body.js-body-menu.active {
-  overflow: hidden;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-}
-button {
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: none;
-  font-size: 0;
-}
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-img {
-  display: block;
-  //   max-width: 100%;
-  height: auto;
-}
 body {
   max-width: 1440px;
 }
@@ -76,6 +23,14 @@ body {
   padding-left: 24px;
 }
 // Общ_____________________________________________________________
+.bestseller-container a {
+text-decoration: none;
+}
+.bestseller-container p {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 .bestseller-button-container{
   display:block;
   text-align: right;
@@ -101,11 +56,12 @@ body {
   text-transform: uppercase;
   color: $color-dark;
   text-align: center;
-  padding-top: 12px;
+  padding-top: 14px;
  
  
 }
 .bestseller-header {
+  margin-top: 0;
   margin-bottom: 40px;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -116,6 +72,7 @@ body {
 }
 
 .bestseller-category-header {
+  margin-top: 0px;
   margin-bottom: 18px;
   font-size: 14px;
   line-height: 1.71;
@@ -151,17 +108,20 @@ body {
   color: $color-grey;
 }
 .bestseller-category-card-set {
+  margin-top: 0px;
+  list-style: none;
  justify-content: center;
+ padding: 0;
 
 
 }
 .bestseller-hover-button{
-  
+
+  display: flex;
   position: absolute;
   left: 0;
   bottom: 0;
-  display: flex;
-  align-items: center;
+ padding-top: 26px;
   justify-content: center;
     width: 100%;
   height: 27.3%;

@@ -59,8 +59,10 @@ function renderMarkupBestseller(topBooks) {
           markup =
             markup +
             `</ul>
-                     <div class="be 
-                    </div>`;
+                     <div class="bestseller-button-container">
+      <a href="" class="bestseller-see-more">see more</a>
+      </div>
+      </div>`;
         }
 
       });
@@ -68,6 +70,7 @@ function renderMarkupBestseller(topBooks) {
 
     }
   });
+  
   refs.bestsellerContainer.innerHTML = markup
 }
 function onClickBestseller(event) {
