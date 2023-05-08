@@ -69,15 +69,9 @@ body{
 
     }
 
+    .burger-menu svg{
+        stroke: $color-light;
+    }
+    
 
-    // Нижче-ніяк не можу пофарбуватки бургер іконку у білий, не знаю де спрайт
-
-    // .burger-menu svg use{
-    //     fill-opacity: $color-light;
-    //     background-color: $color-accent-purple;
-    // }
-
-    // .burger-icon{
-    //     opacity: $color-light;
-    // }
 }
