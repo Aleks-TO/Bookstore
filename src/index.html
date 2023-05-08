@@ -38,13 +38,15 @@
     <include src="./partials/header.html"></include>
 
     <main>
-      <section class="sidebar-left">
-        <include src="./partials/sidebar.html"></include>
-        <include src="./partials/support.html"></include>
-      </section>
-      <section class="bestseller-right">
-        <include src="./partials/bestseller.html"></include>
-      </section>
+      <div class="container">
+        <section class="sidebar-left">
+          <include src="./partials/sidebar.html"></include>
+          <include src="./partials/support.html"></include>
+        </section>
+        <section class="bestseller-container">
+          <include src="./partials/bestseller.html"></include>
+        </section>
+      </div>
     </main>
 
     <include src="./partials/modal-book-info.html"></include>
