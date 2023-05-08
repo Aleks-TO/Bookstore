@@ -26,6 +26,7 @@ overflow-y: scroll;
 font-size: 18px;
 line-height: 24px;
 color: $color-text-sidebar;
+transition: transform 300ms;
 }
 
 .siteBar-category-item:hover,
@@ -35,6 +36,7 @@ color: $color-text-sidebar;
 font-size: 18px;
 line-height: 24px;
 text-transform: uppercase;
+transform: translateY(+6px);
 }
 
 /*MOBILE*/
