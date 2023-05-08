@@ -1,3 +1,14 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -20,7 +31,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  min-width: 335px;
+  width: 335px;
   background-color: $color-light;
 
   border: 2px solid #111111;
@@ -29,6 +40,7 @@
   padding-top: 40px;
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 40px;
 }
 
 .closeBtn {
@@ -44,17 +56,32 @@
   height: 24px;
 }
 
-.modal-container {
-  margin-left: auto;
-  margin-right: auto;
+.book-cover {
+  background-image: url('./../images/bookModal/Rectangle_13.png');
+  background-repeat: no-repeat;
+  width: 287px;
+  height: 458px;
 }
 
-.modal-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+.book-title {
+  font-weight: 700;
+  line-height: calc(18 / 16);
+  margin-top: 14px;
+  letter-spacing: -0.04em;
+}
+
+.book-author {
+  font-style: italic;
+  margin-top: 4px;
+  color: $color-grey;
+}
+
+.description {
+  color: $color-dark;
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
 }
 
 .reset-list {
@@ -63,25 +90,22 @@
   margin: 0;
 }
 
+.shops-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 14px;
+}
+
 .imgIcon {
   filter: grayscale(100%);
 }
 
 .modal-btn {
-  // display: inline-flex;
-  // align-items: center;
-  // justify-content: center;
-
   display: block;
 
-  border: 2px solid $color-accent-purple;
-  border-radius: 40px;
-  font-weight: 700;
-  font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.01em;
-  text-transform: uppercase;
-  color: $color-dark;
+
   text-align: center;
   padding-top: 14px;
   padding-bottom: 14px;
@@ -90,4 +114,60 @@
 
   margin-left: auto;
   margin-right: auto;
+  margin-top: 40px;
+}
+
+.congratulation {
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.04em;
+  max-width: 242px;
+
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and(min-width:768px) {
+  .modal-container {
+    display: flex;
+    gap: 24px;
+  }
+
+  .bookModal {
+    min-width: 579px;
+    padding: 40px;
+  }
+
+  .book-cover {
+    background-image: url('./../images/bookModal/modal_tablet_img.png');
+    background-repeat: no-repeat;
+    width: 192px;
+    height: 281px;
+  }
+
+  .book-title {
+    margin-top: 0;
+  }
+
+  .book-author {
+    margin-top: 8px;
+  }
+
+  .description {
+    max-width: 279px;
+    margin-top: 20px;
+  }
+
+  .shops-icons {
+    margin-top: 20px;
+  }
+
+  .modal-btn {
+    width: 100%;
+  }
+}
+
+@media screen and(min-width:1440px) {
 }
