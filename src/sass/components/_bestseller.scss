@@ -216,3 +216,142 @@
     line-height: 1.71;
   }
 }
+// _______________________________________________________________category_________________________________________________________________
+.category-card-thumb > img {
+  border-radius: 8px 8px 8px 8px;
+}
+
+
+.category-header {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: $color-dark;
+}
+.category-header-part {
+  color: $color-accent-purple;
+}
+
+
+.category-card-thumb {
+   position: relative;
+  margin-bottom: 14px;
+}
+.category-book-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.29;
+
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+
+  color: $color-dark;
+
+  margin-bottom: 4px;
+}
+.category-author {
+  font-style: italic;
+
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: -0.04em;
+
+  color: $color-grey;
+}
+.category-card-set {
+  margin-top: 0px;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+.category-hover-button {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 26px;
+  justify-content: center;
+  width: 100%;
+  height: 27.3%;
+  opacity: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: $color-dark;
+  background: #eac645;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.category-card-link:hover .category-hover-button {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1440px) {
+  
+  .category-card-set {
+    margin-bottom: 32px;
+  }
+  .category-card-thumb > img {
+    width: 180px;
+    height: 256px;
+  }
+
+  .category-category-card-set {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .category-container {
+    max-width: 704px;
+  }
+
+  
+  .category-category-card-set {
+    margin-bottom: 20px;
+  }
+  .category-card-thumb > img {
+    width: 218px;
+    height: 316px;
+  }
+  .category-category-card-set {
+    display: flex;
+    gap: 25px;
+  }
+  
+}
+
+@media screen and (max-width: 767px) {
+  .category-container {
+    max-width: 335px;
+  }
+  
+  .category-header {
+    font-size: 32px;
+    line-height: 1.19;
+  }
+
+  
+  .category-card-set {
+    margin-bottom: 8px;
+  }
+  .category-card-thumb > img {
+    width: 335px;
+    height: 485px;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .category-header {
+    font-size: 48px;
+    line-height: 1.08;
+  }
+ 
+}
