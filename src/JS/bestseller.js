@@ -117,5 +117,5 @@ function onClickBestseller(event) {
   
 
 }
-getListTopBooks();
+// getListTopBooks();
 refs.bestsellerContainer.addEventListener("click",onClickBestseller)
