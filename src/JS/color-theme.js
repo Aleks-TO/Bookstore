@@ -27,22 +27,13 @@ function isThemeSaved (){
 isThemeSaved ();
 
 
-// const load = key => {
-//     try {
-//       const serializedState = localStorage.getItem(key);
-//       return serializedState === null ? undefined : JSON.parse(serializedState);
-//     } catch (error) {
-//       console.error("Get state error: ", error.message);
-//     }
-//   };
-
 console.log(refs.theme);
 
 refs.theme.addEventListener('change', updateTheme);
 
 function updateTheme(e) {
 
-    isThemeSaved ();
+    // isThemeSaved ();
 
   console.log('click');
   e.preventDefault();
@@ -52,11 +43,11 @@ function updateTheme(e) {
     isDarkTheme = true;
     document.body.classList.add('dark-theme');
     console.log(refs.logo.firstElementChild);
-    refs.logo.firstElementChild.src = `/src/images/icons-img/logo.png`;
+    // refs.logo.firstElementChild.src = `./src/images/icons-img/logo-white.png`;
   } else {
     isDarkTheme = false;
     document.body.classList.remove('dark-theme');
-    refs.logo.firstElementChild.src = `/src/images/icons-img/logo.png`;
+    // refs.logo.firstElementChild.src = `./src/images/icons-img/logo.png`;
   }
   localStorage.setItem('isDarkTheme', `${isDarkTheme}`);
 }

@@ -63,13 +63,21 @@ body{
         color:$color-light;
     }
 
-    nav{
+    header{
         background-color: $color-background-dark;
         border: 1.5px solid $color-light;
 
     }
 
-    [href="/src/images/icons-img/symbol-defs.svg#icon-align-left"]{
-        color: $color-light;
-    }
+
+    // Нижче-ніяк не можу пофарбуватки бургер іконку у білий, не знаю де спрайт
+
+    // .burger-menu svg use{
+    //     fill-opacity: $color-light;
+    //     background-color: $color-accent-purple;
+    // }
+
+    // .burger-icon{
+    //     opacity: $color-light;
+    // }
 }
