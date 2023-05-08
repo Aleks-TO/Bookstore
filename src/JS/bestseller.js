@@ -1,16 +1,18 @@
 const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
-// import './JS/support_Ukraine.js'
- async function fetchBookById(id) {
-  const response = await fetch(`https://books-backend.p.goit.global/books/${id}`);
-  const book = await response.json();
+
+ async function fetchcategoryByName(name) {
+  const response = await fetch(`https://books-backend.p.goit.global/books/category?category=${name}`);
+  const bookListByCategory = await response.json();
   
-  return book;
+  return bookListByCategory;
 };
 
-async function getBookByid(id)  {
+async function getbookListByCategory(name)  {
   try {
-    const book = await fetchBookById(id);
-    console.log(book);
+    const bookListByCategory = await fetchcategoryByName(name);
+
+    renderMarkupCategory(name,bookListByCategory);
+    
    
   } catch (error) {
     console.log(error.message);
@@ -101,21 +103,82 @@ function renderMarkupBestseller(topBooks) {
 function onClickBestseller(event) {
     event.preventDefault();
     const eventTarget = event.target.parentElement.parentElement.parentElement
-    const isBookClicked = eventTarget.classList.contains("bestseller-card-link") || eventTarget.classList.contains("bestseller-category-card-set") || eventTarget.classList.contains("card-set-item") || eventTarget.classList.contains("bestseller-card")
+    const isBookClicked = eventTarget.classList.contains("bestseller-card-link") || eventTarget.classList.contains("bestseller-category-card-set") || eventTarget.classList.contains("card-set-item") || eventTarget.classList.contains("bestseller-card") || eventTarget.classList.contains("category-card-link") || eventTarget.classList.contains("category-card-set") || eventTarget.classList.contains("category-card-set-item") || eventTarget.classList.contains("category-card")
     const isButtonClicked = event.target.classList.contains("bestseller-see-more")
     let bookId= eventTarget.querySelector(".id-pointer").dataset.bookid
     let listName=event.target.dataset.buttonid
-
+    
         
   if (!(isBookClicked||isButtonClicked)) {
     return;
   }
   if (isBookClicked) {
-     getBookByid(bookId)
+   console.log(bookId)
   };
-  if (isButtonClicked) {console.log(listName)}
+  if (isButtonClicked) {
+   getbookListByCategory(listName)
+    
+  }
   
 
 }
-// getListTopBooks();
+
+function renderMarkupCategory(name,listBooks) {
+  
+  
+  let markup = `<div class="category-container">
+  <h2 class="category-header">${performListName(name)}</h2>
+  <ul class="category-card-set">`;
+  listBooks.map(({_id, author, book_image, title,}) => {
+     markup = markup + 
+     `<li class="category-card-set-item">
+       <a href="" class="category-card-link">
+         <article class="category-card">
+             <div class="category-card-thumb">
+                 <img src="${book_image}" />
+                 <div class="category-hover-button">
+                     <p>quick view</p>
+                 </div>
+             </div>
+
+             <div class="category-card-content">
+                 <p class="category-book-name">${title}</p>
+                 <p class="category-author id-pointer" data-bookid="${_id}">${author}</p>
+             </div>
+         </article>
+       </a>
+      </li>`;
+
+  });
+  markup = markup+` </ul>
+  </div>`;
+  
+  refs.bestsellerContainer.innerHTML = markup
+}
+
+
+function performListName(listName) {
+  const array = [...listName];
+  let indexOfSpace=[];
+  let lastWord=[];
+  let firstWords=[];
+  
+  array.map((item,i)=>{
+if (item===" ") {indexOfSpace.push(i)}
+  })
+  lastWord = array.slice((indexOfSpace[indexOfSpace.length-1]+1),(array.length))
+  firstWords = array.slice(0,(indexOfSpace[indexOfSpace.length-1]+1))
+  return `${firstWords.join("")}<span class="bestseller-header-part">${lastWord.join("")}</span>`;
+  
+};
+
+
+
+
+
+
+
+
+
+getListTopBooks();
 refs.bestsellerContainer.addEventListener("click",onClickBestseller)
