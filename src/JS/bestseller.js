@@ -1,31 +1,28 @@
-const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
+import bookAPI from './fetch-api/fetch-api.js';
+const bookParams = new bookAPI();
 
- async function fetchcategoryByName(name) {
-  const response = await fetch(`https://books-backend.p.goit.global/books/category?category=${name}`);
-  const bookListByCategory = await response.json();
-  
-  return bookListByCategory;
+const refs = {
+  bestsellerContainer: document.querySelector('.bestseller-container'),
 };
 
-async function getbookListByCategory(name)  {
+async function fetchcategoryByName(name) {
+  const response = await fetch(
+    `https://books-backend.p.goit.global/books/category?category=${name}`
+  );
+  const bookListByCategory = await response.json();
+
+  return bookListByCategory;
+}
+
+async function getbookListByCategory(name) {
   try {
     const bookListByCategory = await fetchcategoryByName(name);
 
-    renderMarkupCategory(name,bookListByCategory);
-    
-   
+    renderMarkupCategory(name, bookListByCategory);
   } catch (error) {
     console.log(error.message);
   }
-};
-
-
-
-
-
-
-
-
+}
 
 const fetchTopBooks = async () => {
   const response = await fetch(
@@ -38,7 +35,7 @@ const fetchTopBooks = async () => {
 const getListTopBooks = async () => {
   try {
     const topBooks = await fetchTopBooks();
-    renderMarkupBestseller(topBooks)
+    renderMarkupBestseller(topBooks);
   } catch (error) {
     console.log(error.message);
   }
@@ -50,21 +47,22 @@ function renderMarkupBestseller(topBooks) {
       </h1>`;
   topBooks.map(({ books, list_name }, i) => {
     if (i < 4) {
-
       markup =
-        markup + `
+        markup +
+        `
           <div class="bestseller-category">
           <h3 class="bestseller-category-header">${list_name}</h3>`;
 
-
       books.map(({ _id, author, book_image, title }, index) => {
         if (index === 0) {
-          markup = markup + `
+          markup =
+            markup +
+            `
              <ul class="bestseller-category-card-set">`;
         }
         markup =
           markup +
-          `               
+          `
             <li class="card-set-item">
               <a href="" class="bestseller-card-link">
                 <article class="bestseller-card">
@@ -74,7 +72,7 @@ function renderMarkupBestseller(topBooks) {
                       <p>quick view</p>
                     </div>
                   </div>
-    
+
                   <div class="bestseller-card-content">
                     <p class="bestseller-book-name">${title}</p>
                     <p class="bestseller-author id-pointer" data-bookid="${_id}">${author}</p>
@@ -91,47 +89,66 @@ function renderMarkupBestseller(topBooks) {
       </div>
       </div>`;
         }
-
       });
-
-
     }
   });
-  
-  refs.bestsellerContainer.innerHTML = markup
+
+  refs.bestsellerContainer.innerHTML = markup;
 }
 function onClickBestseller(event) {
-    event.preventDefault();
-    const eventTarget = event.target.parentElement.parentElement.parentElement
-    const isBookClicked = eventTarget.classList.contains("bestseller-card-link") || eventTarget.classList.contains("bestseller-category-card-set") || eventTarget.classList.contains("card-set-item") || eventTarget.classList.contains("bestseller-card") || eventTarget.classList.contains("category-card-link") || eventTarget.classList.contains("category-card-set") || eventTarget.classList.contains("category-card-set-item") || eventTarget.classList.contains("category-card")
-    const isButtonClicked = event.target.classList.contains("bestseller-see-more")
-    let bookId= eventTarget.querySelector(".id-pointer").dataset.bookid
-    let listName=event.target.dataset.buttonid
-    
-        
-  if (!(isBookClicked||isButtonClicked)) {
+  event.preventDefault();
+  const eventTarget = event.target.parentElement.parentElement.parentElement;
+  const isBookClicked =
+    eventTarget.classList.contains('bestseller-card-link') ||
+    eventTarget.classList.contains('bestseller-category-card-set') ||
+    eventTarget.classList.contains('card-set-item') ||
+    eventTarget.classList.contains('bestseller-card') ||
+    eventTarget.classList.contains('category-card-link') ||
+    eventTarget.classList.contains('category-card-set') ||
+    eventTarget.classList.contains('category-card-set-item') ||
+    eventTarget.classList.contains('category-card');
+  const isButtonClicked = event.target.classList.contains(
+    'bestseller-see-more'
+  );
+  let bookId = eventTarget.querySelector('.id-pointer').dataset.bookid;
+  let listName = event.target.dataset.buttonid;
+
+  if (!(isBookClicked || isButtonClicked)) {
     return;
   }
-  if (isBookClicked) {
-   console.log(bookId)
-  };
-  if (isButtonClicked) {
-   getbookListByCategory(listName)
-    
-  }
-  
 
+  if (isBookClicked) {
+    console.log(bookId);
+    // ********* логика модального вікна, вибраної кніжки *****************
+    bookParams.getBookById(bookId).then(book => {
+      console.log(book);
+      ModalBookCover.style.backgroundImage = `url('${book.book_image}')`;
+      bookModal.classList.toggle('is-hidden');
+    });
+
+    const modalCloseBtn = bookModal.children[0].children[0];
+
+    modalCloseBtn.addEventListener('click', onCloseModal);
+
+    function onCloseModal() {
+      bookModal.classList.toggle('is-hidden');
+      modalCloseBtn.removeEventListener('click', onCloseModal);
+    }
+    // *********************************************************************
+  }
+  if (isButtonClicked) {
+    getbookListByCategory(listName);
+  }
 }
 
-function renderMarkupCategory(name,listBooks) {
-  
-  
+function renderMarkupCategory(name, listBooks) {
   let markup = `<div class="category-container">
   <h2 class="category-header">${performListName(name)}</h2>
   <ul class="category-card-set">`;
-  listBooks.map(({_id, author, book_image, title,}) => {
-     markup = markup + 
-     `<li class="category-card-set-item">
+  listBooks.map(({ _id, author, book_image, title }) => {
+    markup =
+      markup +
+      `<li class="category-card-set-item">
        <a href="" class="category-card-link">
          <article class="category-card">
              <div class="category-card-thumb">
@@ -148,37 +165,35 @@ function renderMarkupCategory(name,listBooks) {
          </article>
        </a>
       </li>`;
-
   });
-  markup = markup+` </ul>
+  markup =
+    markup +
+    ` </ul>
   </div>`;
-  
-  refs.bestsellerContainer.innerHTML = markup
-}
 
+  refs.bestsellerContainer.innerHTML = markup;
+}
 
 function performListName(listName) {
   const array = [...listName];
-  let indexOfSpace=[];
-  let lastWord=[];
-  let firstWords=[];
-  
-  array.map((item,i)=>{
-if (item===" ") {indexOfSpace.push(i)}
-  })
-  lastWord = array.slice((indexOfSpace[indexOfSpace.length-1]+1),(array.length))
-  firstWords = array.slice(0,(indexOfSpace[indexOfSpace.length-1]+1))
-  return `${firstWords.join("")}<span class="bestseller-header-part">${lastWord.join("")}</span>`;
-  
-};
+  let indexOfSpace = [];
+  let lastWord = [];
+  let firstWords = [];
 
-
-
-
-
-
-
-
+  array.map((item, i) => {
+    if (item === ' ') {
+      indexOfSpace.push(i);
+    }
+  });
+  lastWord = array.slice(
+    indexOfSpace[indexOfSpace.length - 1] + 1,
+    array.length
+  );
+  firstWords = array.slice(0, indexOfSpace[indexOfSpace.length - 1] + 1);
+  return `${firstWords.join(
+    ''
+  )}<span class="bestseller-header-part">${lastWord.join('')}</span>`;
+}
 
 getListTopBooks();
-refs.bestsellerContainer.addEventListener("click",onClickBestseller)
+refs.bestsellerContainer.addEventListener('click', onClickBestseller);
