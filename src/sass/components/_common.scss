@@ -27,6 +27,8 @@ body{
     font-family: "DM Sans", sans-serif;
     background-color: $color-background-grey;
     color: $color-dark;
+
+
 }
 
 
@@ -56,4 +58,20 @@ body{
 .dark-theme{
     background-color: $color-background-dark;
     color: $color-light;
+
+    .bestseller-book-name{
+        color:$color-light;
+    }
+
+    header{
+        background-color: $color-background-dark;
+        border: 1.5px solid $color-light;
+
+    }
+
+    .burger-menu svg{
+        stroke: $color-light;
+    }
+    
+
 }
