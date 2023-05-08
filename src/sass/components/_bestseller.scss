@@ -1,18 +1,27 @@
 .container {
   max-width: 1440px;
   display: flex;
-  padding-left: 24px;
+  gap:40px;
+
+  // padding-left: 24px;
   // border: solid 2px palevioletred;
 }
 
 @media screen and (max-width: 767px) {
   .container {
-    display: block;
+    // display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .container {
-    display: block;
+    // display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
   }
 }
 
@@ -135,8 +144,8 @@
 }
 @media screen and (min-width: 1440px) {
   .bestseller-container {
-    padding-left: 40px;
-    padding-right: 24px;
+    // padding-left: 40px;
+    // padding-right: 24px;
   }
   .bestseller-category-card-set {
     margin-bottom: 32px;
@@ -161,8 +170,8 @@
   }
 
   .bestseller-container {
-    padding-left: 32px;
-    padding-right: 32px;
+    // padding-left: 32px;
+    // padding-right: 32px;
   }
   .bestseller-category-card-set {
     margin-bottom: 20px;
@@ -188,8 +197,8 @@
     max-width: 335px;
   }
   .bestseller-container {
-    padding-left: 20px;
-    padding-right: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
   }
   .bestseller-header {
     font-size: 32px;
