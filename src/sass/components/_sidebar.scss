@@ -1,0 +1,89 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 167px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color-background-scroll;
+border-radius: 12px;
+
+}
+
+.siteBar-category-list {
+
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+list-style: none;
+overflow-y: scroll;
+
+}
+
+.siteBar-category-item {
+    font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+color: $color-text-sidebar;
+transition: transform 300ms;
+}
+
+.siteBar-category-item:hover,
+.siteBar-category-item:focus {
+    color: $color-accent-purple;
+    font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+text-transform: uppercase;
+transform: translateY(+6px);
+}
+
+/*MOBILE*/
+@media screen and (max-width: 767px) {
+    .siteBar-container {
+        margin-top: 104px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 335px;
+        
+       
+    }
+
+    .siteBar-category-list {
+        max-height: 307px;
+    }
+}
+
+/*TABLET*/
+@media screen and (min-width: 768px) {
+    .siteBar-container {
+        margin-top: 112px;
+        margin-left: 32px;
+        margin-right: 32px;
+       
+        width: 335px;
+       
+    }
+
+    .siteBar-category-list {
+        max-height: 472px;
+    }
+}
+
+/*DESKTOP*/
+
+@media screen and (min-width:1440px) {
+    .siteBar-container {
+        margin-top: 112px;
+        margin-left: 24px;
+        margin-right: 40px;
+       
+        width: 356px;
+        
+    }
+
+    .siteBar-category-list {
+        max-height: 490px;
+    }
+}
