@@ -9,6 +9,10 @@ border-radius: 12px;
 
 }
 
+.siteBar-container {
+    margin-top: 40px;
+}
+
 .siteBar-category-list {
 
     display: flex;
@@ -21,28 +25,37 @@ overflow-y: scroll;
 
 }
 
-.siteBar-category-item {
+.siteBar-item-link {
     font-weight: 400;
 font-size: 18px;
 line-height: 24px;
 color: $color-text-sidebar;
-transition: transform 300ms;
+    text-decoration: none;
 }
 
-.siteBar-category-item:hover,
-.siteBar-category-item:focus {
+.siteBar-item-link:hover,
+.siteBar-item-link:focus {
     color: $color-accent-purple;
     font-weight: 700;
 font-size: 18px;
 line-height: 24px;
 text-transform: uppercase;
+}
+.siteBar-category-item { 
+
+transition: transform 300ms;
+}
+
+.siteBar-category-item:hover,
+.siteBar-category-item:focus {
+    
 transform: translateY(+6px);
 }
 
 /*MOBILE*/
 @media screen and (max-width: 767px) {
     .siteBar-container {
-        margin-top: 104px;
+        
         margin-left: 20px;
         margin-right: 20px;
         width: 335px;
@@ -58,7 +71,7 @@ transform: translateY(+6px);
 /*TABLET*/
 @media screen and (min-width: 768px) {
     .siteBar-container {
-        margin-top: 112px;
+        
         margin-left: 32px;
         margin-right: 32px;
        
@@ -75,7 +88,7 @@ transform: translateY(+6px);
 
 @media screen and (min-width:1440px) {
     .siteBar-container {
-        margin-top: 112px;
+       
         margin-left: 24px;
         margin-right: 40px;
        

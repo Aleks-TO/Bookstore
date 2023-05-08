@@ -20,7 +20,7 @@ async function fetchBooks() {
   }
   
   function renderBookList({ list_name }) {
-    return `<li class="siteBar-category-item">${list_name}</li>`;
+    return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#">${list_name}</a></li>`;
   }
   
   fetchBooks();
