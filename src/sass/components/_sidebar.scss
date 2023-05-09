@@ -13,9 +13,7 @@
 
 
 
-// .siteBar-container {
-//     margin-top: 40px;
-// }
+
 
 .siteBar-category-list {
 
@@ -29,7 +27,8 @@ overflow-y: scroll;
 
 }
 
-.siteBar-item-link {
+.siteBar-item-link,
+.siteBar-item-links {
     font-weight: 400;
 font-size: 18px;
 line-height: 24px;
@@ -38,7 +37,9 @@ color: $color-text-sidebar;
 }
 
 .siteBar-item-link:hover,
-.siteBar-item-link:focus {
+.siteBar-item-link:focus,
+.siteBar-item-links:hover,
+.siteBar-item-links:focus {
     color: $color-accent-purple;
     font-weight: 700;
 font-size: 18px;
@@ -60,11 +61,9 @@ transform: translateY(+6px);
 @media screen and (max-width: 767px) {
     .siteBar-container {
         
-        // margin-left: 20px;
-        // margin-right: 20px;
+
         width: 335px;
         
-       
     }
 
     .siteBar-category-list {
@@ -76,8 +75,7 @@ transform: translateY(+6px);
 @media screen and (min-width: 768px) {
     .siteBar-container {
         
-        // margin-left: 32px;
-        // margin-right: 32px;
+
        
         width: 335px;
        
@@ -95,9 +93,7 @@ transform: translateY(+6px);
 @media screen and (min-width:1440px) {
     .siteBar-container {
        
-        // margin-left: 24px;
-        // margin-right: 40px;
-       
+
         width: 356px;
         
     }
