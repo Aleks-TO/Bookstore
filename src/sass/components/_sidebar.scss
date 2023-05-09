@@ -1,13 +1,17 @@
-::-webkit-scrollbar {
-    width: 8px;
-    height: 167px;
+.siteBar-container{
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 167px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: $color-background-scroll;
+    border-radius: 12px;
+    
+    }
 }
 
-::-webkit-scrollbar-thumb {
-    background: $color-background-scroll;
-border-radius: 12px;
 
-}
 
 
 
@@ -57,6 +61,7 @@ transform: translateY(+6px);
 @media screen and (max-width: 767px) {
     .siteBar-container {
         
+
         width: 335px;
         
     }
@@ -70,7 +75,7 @@ transform: translateY(+6px);
 @media screen and (min-width: 768px) {
     .siteBar-container {
         
-        
+
        
         width: 335px;
        
@@ -78,7 +83,9 @@ transform: translateY(+6px);
 
     .siteBar-category-list {
         max-height: 472px;
+        font-size: 16px;
     }
+
 }
 
 /*DESKTOP*/
@@ -86,6 +93,7 @@ transform: translateY(+6px);
 @media screen and (min-width:1440px) {
     .siteBar-container {
        
+
         width: 356px;
         
     }

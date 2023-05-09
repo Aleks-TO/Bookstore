@@ -1,0 +1,132 @@
+.support_Ukraine_ol {
+  margin: 0;
+  position: relative;
+  padding: 0;
+  bottom: 0;
+  transition: all ease 0.5s;
+  /* list-style: decimal-leading-zero; */
+  color: #ffffff;
+  list-style: none;
+}
+
+.support_Ukraine {
+
+  // margin-top: 40px;
+  // margin-bottom: 40px;
+  width: 356px;
+  height: 352px;
+  background: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #ffffff 100%
+  );
+  box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+  border-radius: 16px;
+
+
+
+@media screen and (min-width: 375px) {
+  .support_Ukraine {
+    height: 472px;
+  }
+}
+
+.support_Ukraine_title_emblem {
+  position: relative;
+}
+
+.support_Ukraine_title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+  padding-top: 24px;
+  margin-bottom: 40px;
+  margin-left: -32px;
+  text-align: center;
+  color: white;
+}
+
+.support_Ukraine_icons-img {
+  position: absolute;
+  margin-left: 22px;
+  top: 24px;
+  left: 250px;
+  width: 20px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+.support_Ukraine_bnt {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
+
+.support_Ukraine_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.support_Ukraine_bnt:hover,
+.support_Ukraine_bnt:focus {
+  cursor: pointer;
+  background-color: #2509f50f;
+}
+
+.icon-arrow-back-ios-rounded {
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  width: 20px;
+  height: 20px;
+  fill: #4f2ee8;
+}
+
+.support_Ukraine_list {
+  margin-bottom: 16px;
+  margin-left: 40px;
+  width: 159px;
+  height: 188px;
+  /* border: 2px solid rgb(6, 6, 6); */
+  overflow: hidden;
+}
+
+@media screen and (min-width: 375px) {
+  .support_Ukraine_list {
+    height: 292px;
+  }
+}
+
+.support__img {
+  padding-left: 28px;
+  max-width: 115px;
+  max-height: 32px;
+  margin-bottom: 20px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(350%)
+    contrast(500%);
+}
+
+.support_Ukraine_list_ol {
+  position: relative;
+}
+
+.support_Ukraine_num {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-20px);
+  color: #ffffff;
+}
