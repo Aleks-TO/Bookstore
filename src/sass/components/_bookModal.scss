@@ -52,8 +52,16 @@ img {
   align-items: center;
 
   border: none;
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
+
+  background-image: url(./../images/bookModal/Icon_Close_24.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.closeBtn:hover {
+  background-image: url(./../images/bookModal/Icon_close_hover.png);
 }
 
 .book-cover {
