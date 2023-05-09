@@ -49,6 +49,8 @@ const supportUkraine = [
 const olEl = document.querySelector('.support_Ukraine_ol');
 const bntEl = document.querySelector('.support_Ukraine_bnt');
 
+let offset = 0;
+
 function renderList(supportUkraine) {
   const mappedArray = supportUkraine
     .map(({ title, url, img }) => {
@@ -64,7 +66,6 @@ function renderList(supportUkraine) {
 
 renderList(supportUkraine);
 
-let offset = 0;
 bntEl.addEventListener('click', onClickBnt);
 function onClickBnt() {
   offset += 52;
@@ -75,10 +76,15 @@ function onClickBnt() {
   }
   olEl.style.bottom = offset + 'px';
 }
+
 const spanEl = document.querySelectorAll('.support_Ukraine_num ');
 
-spanEl.forEach((el, i) => {
-  const num = i + 1;
-  // console.log(num);
-  el.textContent = '0' + num;
-});
+function createOlList() {
+  spanEl.forEach((el, i) => {
+    const num = i + 1;
+    // console.log(num);
+    el.textContent = '0' + num;
+  });
+}
+
+createOlList();
