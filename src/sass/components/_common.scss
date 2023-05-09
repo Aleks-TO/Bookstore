@@ -31,6 +31,11 @@ body{
 
 }
 
+main{
+    margin-top: 40px;
+    padding: 0 24px;
+}
+
 
 // COMPONENTS
 
@@ -64,7 +69,7 @@ body{
     }
 
     header{
-        background-color: $color-background-dark;
+        background-color: $color-dark;
         border: 1.5px solid $color-light;
 
     }
@@ -73,5 +78,53 @@ body{
         stroke: $color-light;
     }
     
+    .siteBar-item-link{
+        color: rgba(255, 255, 255, 0.6);
+    }
 
+    .siteBar-item-link:hover,
+    .siteBar-item-link:focus {
+    color: $color-accent-yellow;
+    }
 }
+
+// лейаут для Index html
+
+// .container{
+//     display: flex;
+// }
+
+.sidebar-left{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .sidebar-left{
+        flex-direction: row;
+        gap:32px;
+    }
+    
+    main{
+        padding: 0 32px;
+
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .sidebar-left{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    main{
+        padding: 0 20px;
+
+    }
+}
+

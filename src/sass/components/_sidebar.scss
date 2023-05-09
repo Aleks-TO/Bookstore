@@ -1,17 +1,21 @@
-::-webkit-scrollbar {
-    width: 8px;
-    height: 167px;
+.siteBar-container{
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 167px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: $color-background-scroll;
+    border-radius: 12px;
+    
+    }
 }
 
-::-webkit-scrollbar-thumb {
-    background: $color-background-scroll;
-border-radius: 12px;
 
-}
 
-.siteBar-container {
-    margin-top: 40px;
-}
+// .siteBar-container {
+//     margin-top: 40px;
+// }
 
 .siteBar-category-list {
 
@@ -56,8 +60,8 @@ transform: translateY(+6px);
 @media screen and (max-width: 767px) {
     .siteBar-container {
         
-        margin-left: 20px;
-        margin-right: 20px;
+        // margin-left: 20px;
+        // margin-right: 20px;
         width: 335px;
         
        
@@ -72,8 +76,8 @@ transform: translateY(+6px);
 @media screen and (min-width: 768px) {
     .siteBar-container {
         
-        margin-left: 32px;
-        margin-right: 32px;
+        // margin-left: 32px;
+        // margin-right: 32px;
        
         width: 335px;
        
@@ -81,7 +85,9 @@ transform: translateY(+6px);
 
     .siteBar-category-list {
         max-height: 472px;
+        font-size: 16px;
     }
+
 }
 
 /*DESKTOP*/
@@ -89,8 +95,8 @@ transform: translateY(+6px);
 @media screen and (min-width:1440px) {
     .siteBar-container {
        
-        margin-left: 24px;
-        margin-right: 40px;
+        // margin-left: 24px;
+        // margin-right: 40px;
        
         width: 356px;
         
