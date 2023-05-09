@@ -1,8 +1,12 @@
 const bookModal = document.getElementById('bookModal');
 
 const ModalBookCover = document.getElementById('ModalBookCover');
+const bookTitle = document.getElementById('bookTitle');
+const bookAuthor = document.getElementById('bookAuthor');
+const description = document.getElementById('description');
 
 const closeBtn = document.querySelector('.closeBtn');
 
-// const book = new bookAPI();
-// console.log(book.getBookById());
+function testFunction() {
+  console.log('from bookModal.js');
+}
