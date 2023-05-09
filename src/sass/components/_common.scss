@@ -27,6 +27,13 @@ body{
     font-family: "DM Sans", sans-serif;
     background-color: $color-background-grey;
     color: $color-dark;
+
+
+}
+
+main{
+    margin-top: 40px;
+    padding: 0 24px;
 }
 
 
@@ -56,4 +63,68 @@ body{
 .dark-theme{
     background-color: $color-background-dark;
     color: $color-light;
+
+    .bestseller-book-name{
+        color:$color-light;
+    }
+
+    header{
+        background-color: $color-dark;
+        border: 1.5px solid $color-light;
+
+    }
+
+    .burger-menu svg{
+        stroke: $color-light;
+    }
+    
+    .siteBar-item-link{
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .siteBar-item-link:hover,
+    .siteBar-item-link:focus {
+    color: $color-accent-yellow;
+    }
 }
+
+// лейаут для Index html
+
+// .container{
+//     display: flex;
+// }
+
+.sidebar-left{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .sidebar-left{
+        flex-direction: row;
+        gap:32px;
+    }
+    
+    main{
+        padding: 0 32px;
+
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .sidebar-left{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    main{
+        padding: 0 20px;
+
+    }
+}
+
