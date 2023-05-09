@@ -1,7 +1,30 @@
 const categoryList = document.querySelector('.siteBar-category-list');
-const allCategoryBTN = document.getElementById('data-category-id');
+
  
-// allCategoryBTN.addEventListener('click', onClickBestseller);
+
+categoryList.addEventListener('click', onClickCategory);
+
+
+function onClickCategory(event) {
+    event.preventDefault();
+    const eventTarget = event.target;
+    const onCategoryClick = eventTarget.classList.contains('siteBar-item-link');
+    const allCategoryList = eventTarget.classList.contains('siteBar-item-links');
+    let listName = event.target.textContent;
+    
+    if (!(onCategoryClick || allCategoryList)) {
+        return
+    }
+    if (allCategoryList) {
+        getListTopBooks()
+    }
+    if (onCategoryClick) {
+        getbookListByCategory(listName)
+         
+       }
+    console.log(event.target)
+};
+
 
 async function fetchBooks() {
     try {
@@ -24,4 +47,6 @@ async function fetchBooks() {
   }
   
   fetchBooks();
+  
+
   
