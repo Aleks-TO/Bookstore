@@ -122,21 +122,32 @@ function onClickBestseller(event) {
     // ********* логика модального вікна, вибраної кніжки *****************
     bookParams.getBookById(bookId).then(book => {
       console.log(book);
+      // bookModal.renderShops(book);
+      bookModal.hangLinks(book);
       bookTitle.textContent = book.title;
       bookAuthor.textContent = book.author;
       description.textContent =
         book.description === '' ? 'No description' : book.description;
       ModalBookCover.style.backgroundImage = `url('${book.book_image}')`;
       bookModal.classList.toggle('is-hidden');
+
+      document.addEventListener('keydown', funHelp);
     });
 
     const modalCloseBtn = bookModal.children[0].children[0];
 
+    bookModal.addEventListener('click', onCloseModal);
     modalCloseBtn.addEventListener('click', onCloseModal);
 
     function onCloseModal() {
       bookModal.classList.toggle('is-hidden');
       modalCloseBtn.removeEventListener('click', onCloseModal);
+      bookModal.removeEventListener('click', onCloseModal);
+      document.removeEventListener('keydown', funHelp);
+    }
+
+    function funHelp(event) {
+      if (event.code === 'Escape') onCloseModal();
     }
     // *********************************************************************
   }
