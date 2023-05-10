@@ -1,5 +1,5 @@
 import { getListTopBooks } from './bestseller.js';
-import { getbookListByCategory } from './bestseller.js';
+import { getbookListByCategory,renderMarkupBestseller,renderMarkupCategory,performListName,fetchcategoryByName,fetchTopBooks } from './bestseller.js';
 
 const categoryList = document.querySelector('.siteBar-category-list');
 

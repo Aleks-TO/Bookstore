@@ -1,6 +1,6 @@
 
 const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
-export { getListTopBooks };
+export { getListTopBooks, renderMarkupBestseller,renderMarkupCategory,performListName,fetchcategoryByName,fetchTopBooks };
 
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
