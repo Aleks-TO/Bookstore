@@ -1,3 +1,4 @@
+// import light and dakr images
 import closeBtnWhite from '../images/icons-img/x-close-white.png';
 import logoWhite from '../images/icons-img/logo-white.png';
 import amazonLogoWhite from '../images/icons-img/amazon-white.png';
@@ -15,29 +16,8 @@ const refs = {
 };
 
 let isDarkTheme = false;
-
-function isThemeSaved() {
-  try {
-    let currentTheme = localStorage.getItem('isDarkTheme');
-    if (currentTheme === null) {
-      return;
-    }
-    if (currentTheme === 'true') {
-      isDarkTheme = true;
-      document.body.classList.add('dark-theme');
-      refs.theme.setAttribute('checked', 'true');
-
-      // білі іконки
-      refs.closeBtn.src = `${closeBtnWhite}`;
-      refs.logo.src = `${logoWhite}`;
-      refs.amazonIcon.src = `${amazonLogoWhite}`;
-    }
-  } catch (error) {
-    console.log('error for dark theme switcher', error);
-  }
-}
-
 isThemeSaved();
+
 
 refs.theme.addEventListener('change', updateTheme);
 
@@ -46,25 +26,46 @@ function updateTheme(e) {
   localStorage.removeItem('isDarkTheme');
 
   if (refs.theme.checked === true) {
-    isDarkTheme = true;
-    document.body.classList.add('dark-theme');
-
-    // білі іконки на темну тему
-    refs.closeBtn.src = `${closeBtnWhite}`;
-    refs.logo.src = `${logoWhite}`;
-    refs.amazonIcon.src = `${amazonLogoWhite}`;
+    turnDarkModeOn ();
 
   } else {
-    isDarkTheme = false;
-    document.body.classList.remove('dark-theme');
-    
-    // темні іконки
-    refs.closeBtn.src = `${closeBtnDark}`;
-    refs.logo.src = `${logoDark}`;
-    refs.amazonIcon.src = `${amazonLogoDark}`;
-
-
+    turnWhiteModeOn();
   }
-  console.log(('isDarkTheme: ', `${isDarkTheme}`));
+
   localStorage.setItem('isDarkTheme', `${isDarkTheme}`);
+}
+
+function isThemeSaved() {
+  try {
+    let currentTheme = localStorage.getItem('isDarkTheme');
+    if (currentTheme === null) {
+      return;
+    }
+    if (currentTheme === 'true') {
+      turnDarkModeOn();
+    }
+  } catch (error) {
+    console.log('error for dark theme switcher', error);
+  }
+}
+
+function turnDarkModeOn (){
+  isDarkTheme = true;
+  document.body.classList.add('dark-theme');
+  refs.theme.setAttribute('checked', 'true');
+
+  // білі іконки
+  refs.closeBtn.src = `${closeBtnWhite}`;
+  refs.logo.src = `${logoWhite}`;
+  refs.amazonIcon.src = `${amazonLogoWhite}`;
+}
+
+function turnWhiteModeOn(){
+  isDarkTheme = false;
+  document.body.classList.remove('dark-theme');
+  
+  // темні іконки
+  refs.closeBtn.src = `${closeBtnDark}`;
+  refs.logo.src = `${logoDark}`;
+  refs.amazonIcon.src = `${amazonLogoDark}`;
 }
