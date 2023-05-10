@@ -83,16 +83,45 @@ main{
     }
 
     .siteBar-item-link:hover,
-    .siteBar-item-link:focus {
+    .siteBar-item-link:focus, .siteBar-item-links:hover, .siteBar-item-links:focus {
     color: $color-accent-yellow;
+    }
+
+    .category-book-name{
+        color: $color-light;
+    }
+
+    .siteBar-item-links{
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .bookModal{
+        color: $color-light;
+        background-color: $color-background-dark;
+        border: 2px solid $color-light;
+
+    }
+
+    .modal-btn{
+        color: $color-light;
+    }
+
+    .closeBtn{
+        background-color: $color-dark;
+    }
+
+    .imgIcon{
+        mix-blend-mode: luminosity;
+
+    }
+
+    .description{
+        color: $color-light;
+
     }
 }
 
 // лейаут для Index html
-
-// .container{
-//     display: flex;
-// }
 
 .sidebar-left{
     margin-left: auto;

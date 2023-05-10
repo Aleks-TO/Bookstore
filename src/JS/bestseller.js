@@ -1,6 +1,10 @@
 
 const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
 export { getListTopBooks, renderMarkupBestseller,renderMarkupCategory,performListName,fetchcategoryByName,fetchTopBooks };
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
+
+
+
 
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
@@ -22,8 +26,11 @@ export async  function getbookListByCategory(name)  {
 
   try {
     const bookListByCategory = await fetchcategoryByName(name);
-
+    Loading.hourglass();
+    
     renderMarkupCategory(name, bookListByCategory);
+    Loading.remove(400);
+
   } catch (error) {
     console.log(error.message);
   }
