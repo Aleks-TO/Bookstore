@@ -1,12 +1,12 @@
-import saveTheChildren from '../images/icons-img/save-the-children.png';
-import projectHope from '../images/icons-img/project-hope.png';
-import u24 from '../images/icons-img/united24.png';
-import internationalMedicalCorps from '../images/icons-img/international-medical-corps.png';
-import medicinsSansFrontieres from '../images/icons-img/medecins-sans-fronteres.png';
-import razomForUkraine from '../images/icons-img/razom.png';
-import actionAgainstHunger from '../images/icons-img/action-against-hunger.png';
-import worldVision from '../images/icons-img/world-vision.png';
-import serhiyPrytulaCharityFoundation from '../images/icons-img/sergiy-prytula.png';
+// import saveTheChildren from '../images/icons-img/save-the-children.png';
+// import projectHope from '../images/icons-img/project-hope.png';
+// import u24 from '../images/icons-img/united24.png';
+// import internationalMedicalCorps from '../images/icons-img/international-medical-corps.png';
+// import medicinsSansFrontieres from '../images/icons-img/medecins-sans-fronteres.png';
+// import razomForUkraine from '../images/icons-img/razom.png';
+// import actionAgainstHunger from '../images/icons-img/action-against-hunger.png';
+// import worldVision from '../images/icons-img/world-vision.png';
+// import serhiyPrytulaCharityFoundation from '../images/icons-img/sergiy-prytula.png';
 const supportUkraine = [
   {
     title: 'Save the Children',
