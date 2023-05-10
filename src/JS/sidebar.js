@@ -15,7 +15,6 @@ function onClickCategory(event) {
     const onCategoryClick = eventTarget.classList.contains('siteBar-item-link');
     const allCategoryList = eventTarget.classList.contains('siteBar-item-links');
     
-    let categoryId = eventTarget.dataset.buttonId;
     let listName = event.target.textContent;
     
     if (!(onCategoryClick || allCategoryList)) {
@@ -28,19 +27,13 @@ function onClickCategory(event) {
         getbookListByCategory(listName)
          
        }
-
-    
-        
-      
-
-    console.log(event.target)
     
 };
 
 
 
 
-async function fetchBooks() {
+async function fetchCategories() {
     try {
       const response = await fetch("https://books-backend.p.goit.global/books/category-list");
       const books = await response.json();
@@ -60,7 +53,7 @@ async function fetchBooks() {
     return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#" data-buttonid="${list_name}">${list_name}</a></li>`;
   }
   
-  fetchBooks();
+  fetchCategories();
   
 
   

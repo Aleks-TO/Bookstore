@@ -6,9 +6,7 @@ import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
 
 
-const refs = {
-  bestsellerContainer: document.querySelector('.bestseller-container'),
-};
+
 
 async function fetchcategoryByName(name) {
   const response = await fetch(
