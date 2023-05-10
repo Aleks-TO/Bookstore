@@ -42,7 +42,7 @@ async function fetchCategories() {
         return renderBookList(book);
       }).join('');
       
-      console.log(books);
+      // console.log(books);
       categoryList.insertAdjacentHTML("beforeend", makeupListCategory);
     } catch (error) {
       console.error(error);
