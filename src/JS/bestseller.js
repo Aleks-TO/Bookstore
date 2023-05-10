@@ -126,7 +126,7 @@ function onClickBestseller(event) {
     // console.log(bookId);
     // ********* логика модального вікна, вибраної кніжки *****************
     bookParams.getBookById(bookId).then(book => {
-      console.log(book);
+      // console.log(book);
       // bookModal.renderShops(book);
       bookModal.hangLinks(book);
       bookTitle.textContent = book.title;
