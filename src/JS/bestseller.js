@@ -1,5 +1,10 @@
+
+const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
+export { getListTopBooks };
+
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
+
 
 const refs = {
   bestsellerContainer: document.querySelector('.bestseller-container'),
@@ -14,7 +19,9 @@ async function fetchcategoryByName(name) {
   return bookListByCategory;
 }
 
-async function getbookListByCategory(name) {
+
+export async  function getbookListByCategory(name)  {
+
   try {
     const bookListByCategory = await fetchcategoryByName(name);
 
@@ -41,7 +48,7 @@ const getListTopBooks = async () => {
   }
 };
 
-function renderMarkupBestseller(topBooks) {
+ function renderMarkupBestseller(topBooks) {
   let markup = `<h1 class="bestseller-header">
         Best Sellers <span class="bestseller-header-part">Books</span>
       </h1>`;

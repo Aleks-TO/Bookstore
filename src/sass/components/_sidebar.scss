@@ -36,10 +36,19 @@ color: $color-text-sidebar;
     text-decoration: none;
 }
 
+.active {
+    color: $color-accent-purple;
+    font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+}
+
 .siteBar-item-link:hover,
 .siteBar-item-link:focus,
+.siteBar-item-link:active,
 .siteBar-item-links:hover,
-.siteBar-item-links:focus {
+.siteBar-item-links:focus
+.siteBar-item-links:active {
     color: $color-accent-purple;
     font-weight: 700;
 font-size: 18px;
