@@ -4,6 +4,7 @@ export { getListTopBooks, renderMarkupBestseller,renderMarkupCategory,performLis
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 
 
+  Loading.hourglass();
 
 
 import bookAPI from './fetch-api/fetch-api.js';
@@ -54,6 +55,7 @@ const getListTopBooks = async () => {
 };
 
  function renderMarkupBestseller(topBooks) {
+
   let markup = `<h1 class="bestseller-header">
         Best Sellers <span class="bestseller-header-part">Books</span>
       </h1>`;
@@ -106,6 +108,8 @@ const getListTopBooks = async () => {
   });
 
   refs.bestsellerContainer.innerHTML = markup;
+  Loading.remove();
+
 }
 function onClickBestseller(event) {
   event.preventDefault();
