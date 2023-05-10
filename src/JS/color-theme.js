@@ -16,7 +16,8 @@ function isThemeSaved (){
           isDarkTheme = true;
           document.body.classList.add('dark-theme');
           refs.theme.setAttribute('checked', 'true');
-          console.log('user selected a dark theme, changing button to checked');
+          refs.logo.firstElementChild.src = `logo-white.17fec2eb.png`;
+
       
         }
       } catch (error) {

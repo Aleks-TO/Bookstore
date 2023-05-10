@@ -83,16 +83,20 @@ main{
     }
 
     .siteBar-item-link:hover,
-    .siteBar-item-link:focus {
+    .siteBar-item-link:focus, .siteBar-item-links:hover, .siteBar-item-links:focus {
     color: $color-accent-yellow;
+    }
+
+    .category-book-name{
+        color: $color-light;
+    }
+
+    .siteBar-item-links{
+        color: rgba(255, 255, 255, 0.6);
     }
 }
 
 // лейаут для Index html
-
-// .container{
-//     display: flex;
-// }
 
 .sidebar-left{
     margin-left: auto;
