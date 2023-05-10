@@ -1,12 +1,17 @@
-
-const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
-export { getListTopBooks, renderMarkupBestseller,renderMarkupCategory,performListName,fetchcategoryByName,fetchTopBooks };
+const refs = {
+  bestsellerContainer: document.querySelector('.bestseller-container'),
+};
+export {
+  getListTopBooks,
+  renderMarkupBestseller,
+  renderMarkupCategory,
+  performListName,
+  fetchcategoryByName,
+  fetchTopBooks,
+};
 
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
-
-
-
 
 async function fetchcategoryByName(name) {
   const response = await fetch(
@@ -17,9 +22,7 @@ async function fetchcategoryByName(name) {
   return bookListByCategory;
 }
 
-
-export async  function getbookListByCategory(name)  {
-
+export async function getbookListByCategory(name) {
   try {
     const bookListByCategory = await fetchcategoryByName(name);
 
@@ -46,7 +49,7 @@ const getListTopBooks = async () => {
   }
 };
 
- function renderMarkupBestseller(topBooks) {
+function renderMarkupBestseller(topBooks) {
   let markup = `<h1 class="bestseller-header">
         Best Sellers <span class="bestseller-header-part">Books</span>
       </h1>`;
@@ -137,6 +140,27 @@ function onClickBestseller(event) {
       bookModal.classList.toggle('is-hidden');
 
       document.addEventListener('keydown', funHelp);
+
+      if (localStorage.getItem(book._id) === null) {
+        shoppingBtn.textContent = 'add to shopping list';
+        shoppingBtn.nextElementSibling.style.display = 'none';
+      } else {
+        shoppingBtn.textContent = 'remove from the shopping list';
+        shoppingBtn.nextElementSibling.style.display = 'block';
+      }
+
+      shoppingBtn.settingsBook = {
+        id: book._id,
+        title: book.title,
+        author: book.author,
+        description: book.description,
+        book_image: book.book_image,
+        buy_links: book.buy_links,
+      };
+
+      // shoppingBtn.settingsBook = settingsBook;
+
+      shoppingBtn.addEventListener('click', onClickShoppingBtn);
     });
 
     const modalCloseBtn = bookModal.children[0].children[0];
@@ -149,6 +173,21 @@ function onClickBestseller(event) {
       modalCloseBtn.removeEventListener('click', onCloseModal);
       bookModal.removeEventListener('click', onCloseModal);
       document.removeEventListener('keydown', funHelp);
+      shoppingBtn.removeEventListener('click', onClickShoppingBtn);
+    }
+
+    function onClickShoppingBtn(event) {
+      console.log(event.target.settingsBook);
+
+      if (localStorage.getItem(event.target.settingsBook.id) === null) {
+        localStorage.setItem(
+          event.target.settingsBook.id,
+          JSON.stringify(event.target.settingsBook)
+        );
+      } else {
+        localStorage.removeItem(event.target.settingsBook.id);
+      }
+      onCloseModal();
     }
 
     function funHelp(event) {
