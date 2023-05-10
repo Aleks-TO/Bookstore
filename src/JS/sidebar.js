@@ -1,9 +1,39 @@
-const categoryList = document.querySelector('.siteBar-category-list');
-const allCategoryBTN = document.getElementById('data-category-id');
- 
-// allCategoryBTN.addEventListener('click', onClickBestseller);
+import { getListTopBooks } from './bestseller.js';
+import { getbookListByCategory,renderMarkupBestseller,renderMarkupCategory,performListName,fetchcategoryByName,fetchTopBooks } from './bestseller.js';
 
-async function fetchBooks() {
+const categoryList = document.querySelector('.siteBar-category-list');
+
+
+
+categoryList.addEventListener('click', onClickCategory);
+
+
+
+function onClickCategory(event) {
+    event.preventDefault();
+    const eventTarget = event.target;
+    const onCategoryClick = eventTarget.classList.contains('siteBar-item-link');
+    const allCategoryList = eventTarget.classList.contains('siteBar-item-links');
+    
+    let listName = event.target.textContent;
+    
+    if (!(onCategoryClick || allCategoryList)) {
+        return
+    }
+    if (allCategoryList) {
+        getListTopBooks()
+    }
+    if (onCategoryClick) {
+        getbookListByCategory(listName)
+         
+       }
+    
+};
+
+
+
+
+async function fetchCategories() {
     try {
       const response = await fetch("https://books-backend.p.goit.global/books/category-list");
       const books = await response.json();
@@ -12,7 +42,7 @@ async function fetchBooks() {
         return renderBookList(book);
       }).join('');
       
-      console.log(books);
+      // console.log(books);
       categoryList.insertAdjacentHTML("beforeend", makeupListCategory);
     } catch (error) {
       console.error(error);
@@ -20,8 +50,10 @@ async function fetchBooks() {
   }
   
   function renderBookList({ list_name }) {
-    return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#">${list_name}</a></li>`;
+    return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#" data-buttonid="${list_name}">${list_name}</a></li>`;
   }
   
-  fetchBooks();
+  fetchCategories();
+  
+
   
