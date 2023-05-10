@@ -94,6 +94,31 @@ main{
     .siteBar-item-links{
         color: rgba(255, 255, 255, 0.6);
     }
+
+    .bookModal{
+        color: $color-light;
+        background-color: $color-background-dark;
+        border: 2px solid $color-light;
+
+    }
+
+    .modal-btn{
+        color: $color-light;
+    }
+
+    .closeBtn{
+        background-color: $color-dark;
+    }
+
+    .imgIcon{
+        mix-blend-mode: luminosity;
+
+    }
+
+    .description{
+        color: $color-light;
+
+    }
 }
 
 // лейаут для Index html
