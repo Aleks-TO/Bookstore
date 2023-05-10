@@ -1,6 +1,6 @@
 
 const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
-export { getListTopBooks };
+export { getListTopBooks, renderMarkupBestseller,renderMarkupCategory,performListName,fetchcategoryByName,fetchTopBooks };
 
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
@@ -126,7 +126,7 @@ function onClickBestseller(event) {
     // console.log(bookId);
     // ********* логика модального вікна, вибраної кніжки *****************
     bookParams.getBookById(bookId).then(book => {
-      console.log(book);
+      // console.log(book);
       // bookModal.renderShops(book);
       bookModal.hangLinks(book);
       bookTitle.textContent = book.title;
