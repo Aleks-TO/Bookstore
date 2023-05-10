@@ -1,48 +1,57 @@
+import saveTheChildren from '../images/icons-img/save-the-children.png';
+import projectHope from '../images/icons-img/project-hope.png';
+import u24 from '../images/icons-img/united24.png';
+import internationalMedicalCorps from '../images/icons-img/international-medical-corps.png';
+import medicinsSansFrontieres from '../images/icons-img/medecins-sans-fronteres.png';
+import razomForUkraine from '../images/icons-img/razom.png';
+import actionAgainstHunger from '../images/icons-img/action-against-hunger.png';
+import worldVision from '../images/icons-img/world-vision.png';
+import serhiyPrytulaCharityFoundation from '../images/icons-img/sergiy-prytula.png';
 const supportUkraine = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-    img: './images/icons-img/save-the-children.pnd',
+    img: `${saveTheChildren}`,
   },
   {
     title: 'Project HOPE',
     url: 'https://www.projecthope.org/country/ukraine/',
-    img: './images/icons-img/project-hope.png',
+    img: `${projectHope}`,
   },
   {
     title: 'UNITED24',
     url: 'https://u24.gov.ua/uk',
-    img: './images/icons-img/united24.png',
+    img: `${u24}`,
   },
   {
     title: 'International Medical Corps',
     url: 'https://internationalmedicalcorps.org/country/ukraine/',
-    img: './images/icons-img/international-medical-corps.png',
+    img: `${internationalMedicalCorps}`,
   },
   {
     title: 'Medicins Sans Frontieres',
     url: 'https://www.msf.org/ukraine',
-    img: './images/icons-img/medecins-sans-fronteres.png',
+    img: `${medicinsSansFrontieres}`,
   },
   {
     title: 'RAZOM',
     url: 'https://www.razomforukraine.org/',
-    img: './images/icons-img/razom.png',
+    img: `${razomForUkraine}`,
   },
   {
     title: 'Action against hunger',
     url: 'https://www.actionagainsthunger.org/location/europe/ukraine/',
-    img: './images/icons-img/action-against-hunger.png',
+    img: `${actionAgainstHunger}`,
   },
   {
     title: 'World vision',
     url: 'https://www.wvi.org/emergencies/ukraine',
-    img: './images/icons-img/world-vision.png',
+    img: `${worldVision}`,
   },
   {
     title: 'Serhiy Prytula Charity Foundation',
     url: 'https://prytulafoundation.org/en',
-    img: './images/icons-img/sergiy-prytula.png',
+    img: `${serhiyPrytulaCharityFoundation}`,
   },
 ];
 
