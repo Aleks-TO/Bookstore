@@ -6,4 +6,4 @@ import './JS/support_Ukraine.js';
 
 import './JS/color-theme.js';
 
-
+import './JS/bookModal.js';
