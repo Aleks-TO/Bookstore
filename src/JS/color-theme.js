@@ -1,10 +1,10 @@
 // import light and dakr images
 import closeBtnWhite from '../images/icons-img/x-close-white.png';
-import logoWhite from '../images/icons-img/logo-white.png';
+import logoWhite from '../images/icons-img/logo-white2x.png';
 import amazonLogoWhite from '../images/icons-img/amazon-white.png';
 
 import closeBtnDark from '../images/bookModal/Icon_Close_24.png';
-import logoDark from '../images/icons-img/logo.png';
+import logoDark from '../images/icons-img/logo@2x.png';
 import amazonLogoDark from '../images/icons-img/amazon.png';
 
 const refs = {
