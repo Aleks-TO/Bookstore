@@ -11,7 +11,9 @@ const supportUkraine = [
   {
     title: 'Save the Children',
     url: 'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
+
     img: `${saveTheChildren}`,
+
   },
   {
     title: 'Project HOPE',
