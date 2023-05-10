@@ -7,7 +7,7 @@ burgerMenu.addEventListener('click', function () {
 
 const shoplistBtn = document.querySelector('.shoplist-btn');
 shoplistBtn.addEventListener('click', e => {
-  e.preventDefault();
+  // e.preventDefault();
   window.location.href = './shopping-list.html';
   shoplistBtn.classList.add('current');
 });
