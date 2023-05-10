@@ -1,8 +1,12 @@
+import { getListTopBooks } from './bestseller.js';
+import { getbookListByCategory } from './bestseller.js';
+
 const categoryList = document.querySelector('.siteBar-category-list');
 
- 
+
 
 categoryList.addEventListener('click', onClickCategory);
+
 
 
 function onClickCategory(event) {
@@ -10,6 +14,8 @@ function onClickCategory(event) {
     const eventTarget = event.target;
     const onCategoryClick = eventTarget.classList.contains('siteBar-item-link');
     const allCategoryList = eventTarget.classList.contains('siteBar-item-links');
+    
+    let categoryId = eventTarget.dataset.buttonId;
     let listName = event.target.textContent;
     
     if (!(onCategoryClick || allCategoryList)) {
@@ -22,8 +28,16 @@ function onClickCategory(event) {
         getbookListByCategory(listName)
          
        }
+
+    
+        
+      
+
     console.log(event.target)
+    
 };
+
+
 
 
 async function fetchBooks() {
@@ -43,7 +57,7 @@ async function fetchBooks() {
   }
   
   function renderBookList({ list_name }) {
-    return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#">${list_name}</a></li>`;
+    return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#" data-buttonid="${list_name}">${list_name}</a></li>`;
   }
   
   fetchBooks();

@@ -1,4 +1,6 @@
 const refs = { bestsellerContainer: document.querySelector(".bestseller-container"), }
+export { getListTopBooks };
+
 
  async function fetchcategoryByName(name) {
   const response = await fetch(`https://books-backend.p.goit.global/books/category?category=${name}`);
@@ -7,7 +9,7 @@ const refs = { bestsellerContainer: document.querySelector(".bestseller-containe
   return bookListByCategory;
 };
 
-async function getbookListByCategory(name)  {
+export async  function getbookListByCategory(name)  {
   try {
     const bookListByCategory = await fetchcategoryByName(name);
 
@@ -44,7 +46,7 @@ const getListTopBooks = async () => {
   }
 };
 
-function renderMarkupBestseller(topBooks) {
+ function renderMarkupBestseller(topBooks) {
   let markup = `<h1 class="bestseller-header">
         Best Sellers <span class="bestseller-header-part">Books</span>
       </h1>`;
