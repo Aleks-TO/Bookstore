@@ -43,11 +43,12 @@ function updateTheme(e) {
     isDarkTheme = true;
     document.body.classList.add('dark-theme');
     console.log(refs.logo.firstElementChild);
-    // refs.logo.firstElementChild.src = `./src/images/icons-img/logo-white.png`;
+    refs.logo.firstElementChild.src = `logo-white.17fec2eb.png`;
   } else {
     isDarkTheme = false;
     document.body.classList.remove('dark-theme');
-    // refs.logo.firstElementChild.src = `./src/images/icons-img/logo.png`;
+    refs.logo.firstElementChild.src = `/logo.024aa838.png`;
+    //src/images/icons-img/logo-white.png
   }
   localStorage.setItem('isDarkTheme', `${isDarkTheme}`);
 }
