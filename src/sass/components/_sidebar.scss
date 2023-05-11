@@ -37,6 +37,13 @@ color: $color-text-sidebar;
     text-decoration: none;
 }
 
+.active {
+    color: $color-accent-purple;
+    font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+text-transform: uppercase;
+}
 
 .siteBar-item-link:hover,
 .siteBar-item-link:focus,
@@ -47,6 +54,7 @@ color: $color-text-sidebar;
 font-size: 18px;
 line-height: 24px;
 text-transform: uppercase;
+outline: none;
 }
 .siteBar-category-item { 
 
