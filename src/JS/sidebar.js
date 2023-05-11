@@ -10,6 +10,8 @@ import {
 
 const categoryList = document.querySelector('.siteBar-category-list');
 
+const bestsellerContainer = document.querySelector('.bestseller-container');
+
 categoryList.addEventListener('click', onClickCategory);
 
 function onClickCategory(event) {
