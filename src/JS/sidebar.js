@@ -27,7 +27,7 @@ function onClickCategory(event) {
         getbookListByCategory(listName)
          
        }
-    
+   
 };
 
 
@@ -55,5 +55,29 @@ async function fetchCategories() {
   
   fetchCategories();
   
+/*підсвітка*/
 
-  
+window.onload = function() {
+    document.querySelector('.siteBar-item-links').focus();
+};
+
+  bestsellerContainer.addEventListener('click', (event) => {
+    if(event.target.classList.contains("bestseller-see-more")) {
+        let category = event.target.dataset.buttonid;
+        getbookListByCategory(category);
+    highlightCategory(category);
+    
+    }
+    });
+
+    function highlightCategory(category) {
+        const allCategoryLink = document.querySelectorAll(".siteBar-category-link");
+        allCategoryLink.forEach(link => {
+            if(link.dataset.category === category) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+            console.log(link.dataset.buttonid);
+        })
+    }
