@@ -73,10 +73,10 @@ bestsellerContainer.addEventListener('click', (event) => {
  let category = event.target.dataset.buttonid;
 
  let indexOfCategory = listOfFetchingCategory.indexOf(category)
- console.log(indexOfCategory)
- console.log(category)
- console.log(listOfFetchingCategory)
- listOfFetchingCategory.map(({list_name})=>{console.log(book)})
+//  console.log(indexOfCategory)
+//  console.log(category)
+//  console.log(listOfFetchingCategory)
+//  listOfFetchingCategory.map(({list_name})=>{console.log(list_name)})
  highlightCategory(category);
 
  }
