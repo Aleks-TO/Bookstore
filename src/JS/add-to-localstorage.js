@@ -1,5 +1,13 @@
+
 class ApiLocalStorage {
-  constructor() {}
-  addToStorage() {}
-  removeFromStorage() {}
+
+  constructor() {
+
+  }
+  addToStorage() { 
+  }
+  removeFromStorage() {
+
+  }
+
 }
