@@ -3,7 +3,7 @@ import { getbookListByCategory,renderMarkupBestseller,renderMarkupCategory,perfo
 
 const categoryList = document.querySelector('.siteBar-category-list');
 
-
+const bestsellerContainer= document.querySelector(".bestseller-container")
 
 categoryList.addEventListener('click', onClickCategory);
 
