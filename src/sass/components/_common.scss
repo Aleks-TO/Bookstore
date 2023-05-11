@@ -27,6 +27,13 @@ body{
     font-family: "DM Sans", sans-serif;
     background-color: $color-background-grey;
     color: $color-dark;
+
+
+}
+
+main{
+    margin-top: 40px;
+    padding: 0 24px;
 }
 
 
@@ -56,4 +63,123 @@ body{
 .dark-theme{
     background-color: $color-background-dark;
     color: $color-light;
+
+    .bestseller-book-name{
+        color:$color-light;
+    }
+
+    header{
+        background-color: $color-dark;
+        border: 1.5px solid $color-light;
+
+    }
+
+    .burger-menu svg{
+        stroke: $color-light;
+    }
+    
+    .siteBar-item-link{
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .siteBar-item-link:hover,
+    .siteBar-item-link:focus, .siteBar-item-links:hover, .siteBar-item-links:focus {
+    color: $color-accent-yellow;
+    }
+
+    .category-book-name{
+        color: $color-light;
+    }
+
+    .siteBar-item-links{
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .bookModal{
+        color: $color-light;
+        background-color: $color-background-dark;
+        border: 2px solid $color-light;
+
+    }
+
+    .modal-btn{
+        color: $color-light;
+    }
+
+    .closeBtn{
+        background-color: $color-dark;
+    }
+
+    .imgIcon{
+        mix-blend-mode: luminosity;
+
+    }
+
+    .description{
+        color: $color-light;
+
+    }
+}
+
+// лейаут для Index html
+
+.sidebar-left{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .sidebar-left{
+        flex-direction: row;
+        gap:32px;
+    }
+    
+    main{
+        padding: 0 32px;
+
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .sidebar-left{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    main{
+        padding: 0 20px;
+
+    }
+}
+
+#scrollUpBtn{
+    display: none;
+    width: 64px;
+    height: 64px;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center; 
+    transition: all ease-in 300;
+    position: fixed; 
+    bottom: 40px;
+    right: 20px;
+    z-index: 99; 
+    border: 5px solid #C4BAF2;
+    outline: none; /* Remove outline */
+    background-color: $color-accent-purple;
+    border-radius: 100; 
+    color: $color-light;
+    fill: $color-light;
+    cursor: pointer; 
+    transition: transform 400ms;
+
+
+    &:hover{
+        transform: scale(1.2);
+    }
 }
