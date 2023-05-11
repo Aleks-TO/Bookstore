@@ -29,8 +29,6 @@
   }
 }
 @media screen and (min-width: 1440px) {
-
-
   .support_Ukraine {
     width: 356px;
     height: 490px;
@@ -140,7 +138,6 @@
   background-color: #2509f50f;
 }
 
-
 .support_Ukraine_list {
   margin-bottom: 16px;
   margin-left: 40px;
@@ -167,10 +164,6 @@
   fill: #4f2ee8;
 }
 
-
-
-
-
 .support__img {
   // max-width: 115px;
   max-height: 32px;
@@ -186,7 +179,6 @@
   }
 }
 
-
 .icon-arrow-back-ios-rounded {
   display: flex;
   justify-content: center;
@@ -201,10 +193,7 @@
 
   margin-bottom: 22px;
 
- 
   max-height: 32px;
- 
-
 
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(350%)
     contrast(500%);
@@ -221,15 +210,13 @@
   position: relative;
 }
 
-
-  .support_Ukraine_num {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transform: translateY(-20px);
-    color: #ffffff;
-  }
-
+.support_Ukraine_num {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-20px);
+  color: #ffffff;
+}
