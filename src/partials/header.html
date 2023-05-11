@@ -1,8 +1,18 @@
 <header class="header">
   <nav>
     <a class="logo" href="#">
-      <img src="/src/images/icons-img/logo@2x.png" alt="logo" id="logo"/>
+      <img src="/src/images/icons-img/logo@2x.png" alt="logo" id="logo" />
     </a>
+    <div class="buttons__container">
+      <button class="btn-home home-btn">home</button>
+      <button class="btn-shop shoplist-btn">
+        <span>shopping list</span>
+        <svg width="20" height="20">
+          <use href="/src/images/img-symbols/symbol-defs.svg#icon-emblem"></use>
+        </svg>
+      </button>
+    </div>
+
     <div class="toggler">
       <input id="toggler-1" name="toggler-1" type="checkbox" value="1" />
       <label for="toggler-1"> </label>
@@ -13,14 +23,14 @@
       </svg>
     </a>
     <!-- кнопки home та shoping list -->
-    <button class="home-btn" type="button">Home</button>
-    <button class="shoplist-btn" type="button">ShopList</button>
+    <!-- <button class="home-btn" type="button">Home</button>
+    <button class="shoplist-btn" type="button">ShopList</button> -->
     <!-- end кнопки home та shoping list -->
     <button class="btn-sign_up" type="button">
       <span>Sign up</span>
       <svg width="20" height="20">
         <use
-          href="/src/images/icons-img/symbol-defs.svg#icon-arrow-narrow-right"
+          href="/src/images/img-symbols/symbol-defs.svg#icon-right-arrow"
         ></use>
       </svg>
     </button>
@@ -33,7 +43,7 @@
       <span>Sign up</span>
       <svg width="20" height="20">
         <use
-          href="/src/images/icons-img/symbol-defs.svg#icon-arrow-narrow-right"
+          href="/src/images/img-symbols/symbol-defs.svg#icon-right-arrow"
         ></use>
       </svg>
     </button>
