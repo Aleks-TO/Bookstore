@@ -189,11 +189,10 @@
 }
 
 .support__img {
-  padding-left: 28px;
-
-  margin-bottom: 22px;
-
+  max-width: 115px;
   max-height: 32px;
+  padding-left: 28px;
+  margin-bottom: 18px;
 
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(350%)
     contrast(500%);
