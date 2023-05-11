@@ -9,6 +9,9 @@ export {
   fetchcategoryByName,
   fetchTopBooks,
 };
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
+
+Loading.hourglass();
 
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
@@ -25,8 +28,10 @@ async function fetchcategoryByName(name) {
 export async function getbookListByCategory(name) {
   try {
     const bookListByCategory = await fetchcategoryByName(name);
+    Loading.hourglass();
 
     renderMarkupCategory(name, bookListByCategory);
+    Loading.remove(400);
   } catch (error) {
     console.log(error.message);
   }
@@ -102,6 +107,7 @@ function renderMarkupBestseller(topBooks) {
   });
 
   refs.bestsellerContainer.innerHTML = markup;
+  Loading.remove();
 }
 function onClickBestseller(event) {
   event.preventDefault();

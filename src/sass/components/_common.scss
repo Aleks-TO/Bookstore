@@ -2,129 +2,174 @@
 @import '../utils/variables';
 
 html {
-    box-sizing: border-box;
-    font-size: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @font-face {
-    font-family: "DM Sans", sans-serif;
-    src: url("../fonts/DMSans-Regular.ttf"), url("../fonts/DMSans-Italic.ttf"), url("../fonts/DMSans-Medium.ttf"),
-        url("../fonts/DMSans-Bold.ttf");
+  font-family: 'DM Sans', sans-serif;
+  src: url('../fonts/DMSans-Regular.ttf'), url('../fonts/DMSans-Italic.ttf'),
+    url('../fonts/DMSans-Medium.ttf'), url('../fonts/DMSans-Bold.ttf');
 }
 
-
-body{
-    font-family: "DM Sans", sans-serif;
-    background-color: $color-background-grey;
-    color: $color-dark;
-
-
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: $color-background-grey;
+  color: $color-dark;
 }
 
-main{
-    margin-top: 40px;
-    padding: 0 24px;
+main {
+  margin-top: 40px;
+  padding: 0 24px;
 }
-
 
 // COMPONENTS
 
 .button {
-    padding: 14px 28px;
+  padding: 14px 28px;
 
-    background-color: inherit;
-    border: 2px solid $color-accent-purple;
-    border-radius: 40px;
+  background-color: inherit;
+  border: 2px solid $color-accent-purple;
+  border-radius: 40px;
 
-    color: $color-dark;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
+  color: $color-dark;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
 
-    transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
 }
 
-.button:hover, .button:focus{
-    background-color: $color-accent-purple;
-    color: $color-light;
+.button:hover,
+.button:focus {
+  background-color: $color-accent-purple;
+  color: $color-light;
 }
 
-.dark-theme{
-    background-color: $color-background-dark;
+.dark-theme {
+  background-color: $color-background-dark;
+  color: $color-light;
+
+  .bestseller-book-name {
     color: $color-light;
+  }
 
-    .bestseller-book-name{
-        color:$color-light;
-    }
+  header {
+    background-color: $color-dark;
+    border: 1.5px solid $color-light;
+  }
 
-    header{
-        background-color: $color-dark;
-        border: 1.5px solid $color-light;
+  .burger-menu svg {
+    stroke: $color-light;
+  }
 
-    }
+  .siteBar-item-link {
+    color: rgba(255, 255, 255, 0.6);
+  }
 
-    .burger-menu svg{
-        stroke: $color-light;
-    }
-    
-    .siteBar-item-link{
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .siteBar-item-link:hover,
-    .siteBar-item-link:focus {
+  .siteBar-item-link:hover,
+  .siteBar-item-link:focus,
+  .siteBar-item-links:hover,
+  .siteBar-item-links:focus {
     color: $color-accent-yellow;
-    }
+  }
+
+  .category-book-name {
+    color: $color-light;
+  }
+
+  .siteBar-item-links {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .bookModal {
+    color: $color-light;
+    background-color: $color-background-dark;
+    border: 2px solid $color-light;
+  }
+
+  .modal-btn {
+    color: $color-light;
+  }
+
+  .closeBtn {
+    background-color: $color-dark;
+  }
+
+  .imgIcon {
+    mix-blend-mode: luminosity;
+  }
+
+  .description {
+    color: $color-light;
+  }
 }
 
 // лейаут для Index html
 
-// .container{
-//     display: flex;
-// }
-
-.sidebar-left{
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 86px;
+.sidebar-left {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 86px;
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-    .sidebar-left{
-        flex-direction: row;
-        gap:32px;
-    }
-    
-    main{
-        padding: 0 32px;
+  .sidebar-left {
+    flex-direction: row;
+    gap: 32px;
+  }
 
-    }
-    
+  main {
+    padding: 0 32px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .sidebar-left{
-        flex-direction: column;
-        gap: 40px;
-    }
+  .sidebar-left {
+    flex-direction: column;
+    gap: 40px;
+  }
 
-    main{
-        padding: 0 20px;
-
-    }
+  main {
+    padding: 0 20px;
+  }
 }
 
+#scrollUpBtn {
+  display: none;
+  width: 64px;
+  height: 64px;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in 300;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 99;
+  border: 5px solid #c4baf2;
+  outline: none; /* Remove outline */
+  background-color: $color-accent-purple;
+  border-radius: 100;
+  color: $color-light;
+  fill: $color-light;
+  cursor: pointer;
+  transition: transform 400ms;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

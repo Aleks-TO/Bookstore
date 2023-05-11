@@ -1,97 +1,94 @@
-.siteBar-container{
-    ::-webkit-scrollbar {
-        width: 8px;
-        height: 167px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background: $color-background-scroll;
+.siteBar-container {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 167px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $color-background-scroll;
     border-radius: 12px;
-    
-    }
+  }
 }
 
-
-
-
-
 .siteBar-category-list {
-
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-margin: 0px;
-gap: 32px;
-list-style: none;
-overflow-y: scroll;
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin: 0px;
+  gap: 32px;
+  list-style: none;
+  overflow-y: scroll;
 }
 
 .siteBar-item-link,
 .siteBar-item-links {
-    font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-color: $color-text-sidebar;
-    text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: $color-text-sidebar;
+  text-decoration: none;
 }
 
+.active {
+  color: $color-accent-purple;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
 
 .siteBar-item-link:hover,
 .siteBar-item-link:focus,
 .siteBar-item-links:hover,
 .siteBar-item-links:focus {
-    color: $color-accent-purple;
-    font-weight: 700;
-font-size: 18px;
-line-height: 24px;
-text-transform: uppercase;
+  color: $color-accent-purple;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  outline: none;
 }
-.siteBar-category-item { 
-
-transition: transform 300ms;
+.siteBar-category-item {
+  transition: transform 300ms;
 }
 
 .siteBar-category-item:hover,
 .siteBar-category-item:focus {
-    
-transform: translateY(+6px);
+  transform: translateY(+6px);
 }
 
 /*MOBILE*/
 @media screen and (max-width: 767px) {
-    .siteBar-container {
-        width: 335px;
-    }
+  .siteBar-container {
+    width: 335px;
+  }
 
-    .siteBar-category-list {
-        max-height: 307px;
-    }
+  .siteBar-category-list {
+    max-height: 307px;
+  }
 }
 
 /*TABLET*/
 @media screen and (min-width: 768px) {
-    .siteBar-container {
-        width: 335px;
-    }
+  .siteBar-container {
+    width: 335px;
+  }
 
-    .siteBar-category-list {
-        max-height: 472px;
-        font-size: 16px;
-    }
-
+  .siteBar-category-list {
+    max-height: 472px;
+    font-size: 16px;
+  }
 }
 
 /*DESKTOP*/
 
-@media screen and (min-width:1440px) {
-    .siteBar-container {
+@media screen and (min-width: 1440px) {
+  .siteBar-container {
+    width: 356px;
+  }
 
-        width: 356px;
-    }
-
-    .siteBar-category-list {
-        max-height: 490px;
-    }
+  .siteBar-category-list {
+    max-height: 490px;
+  }
 }
