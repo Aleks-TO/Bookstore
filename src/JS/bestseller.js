@@ -1,3 +1,4 @@
+
 const refs = {
   bestsellerContainer: document.querySelector('.bestseller-container'),
 };
@@ -31,6 +32,7 @@ Loading.hourglass();
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
 
+
 async function fetchcategoryByName(name) {
   const response = await fetch(
     `https://books-backend.p.goit.global/books/category?category=${name}`
@@ -58,6 +60,7 @@ export async function getbookListByCategory(name) {
     console.log(error.message);
   }
 }
+
 
 const fetchTopBooks = async () => {
   const response = await fetch(
@@ -192,6 +195,10 @@ function onClickBestseller(event) {
   }
 }
 
+
+  return bookListByCategory;
+}
+
 function renderMarkupCategory(name, listBooks) {
   let markup = `<div class="category-container">
   <h2 class="category-header">${performListName(name)}</h2>
@@ -248,6 +255,7 @@ function performListName(listName) {
 
 getListTopBooks();
 refs.bestsellerContainer.addEventListener('click', onClickBestseller);
+
 
 export async function getbookListByCategory(name) {
   try {
@@ -486,3 +494,4 @@ function performListName(listName) {
 
 getListTopBooks();
 refs.bestsellerContainer.addEventListener('click', onClickBestseller);
+
