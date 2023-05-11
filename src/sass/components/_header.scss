@@ -8,14 +8,18 @@
   nav {
     display: flex;
   }
-
-  // додаю відступ до низу
-  margin-bottom: 40px;
 }
 
 // Логотип
 .logo {
+  width: 109px;
+  height: auto;
+
   margin: 22px 0px 22px 24px;
+}
+
+.invisible{
+  display: none;
 }
 
 /* Інпут(чекбокс) */
