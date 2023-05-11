@@ -39,6 +39,26 @@
   position: relative;
 }
 
+.support_Ukraine_title_emblem {
+  position: relative;
+}
+
+.support_Ukraine_title_emblem {
+  position: relative;
+}
+
+.support_Ukraine_title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+  padding-top: 24px;
+  margin-bottom: 40px;
+  margin-left: -32px;
+  text-align: center;
+  color: white;
+}
 .support_Ukraine_title {
   font-weight: 700;
   font-size: 28px;
@@ -61,7 +81,26 @@
   height: 32px;
   fill: #ffffff;
 }
+.support_Ukraine_icons-img {
+  position: absolute;
+  margin-left: 22px;
+  top: 24px;
+  left: 250px;
+  width: 20px;
+  height: 32px;
+  fill: #ffffff;
+}
 
+.support_Ukraine_bnt {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+}
 .support_Ukraine_bnt {
   display: block;
   margin-right: auto;
@@ -80,7 +119,19 @@
   width: 20px;
   height: 20px;
 }
+.support_Ukraine_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
 
+.support_Ukraine_bnt:hover,
+.support_Ukraine_bnt:focus {
+  cursor: pointer;
+  background-color: #2509f50f;
+}
 .support_Ukraine_bnt:hover,
 .support_Ukraine_bnt:focus {
   cursor: pointer;
@@ -95,10 +146,36 @@
   // border: 2px solid rgb(6, 6, 6);
   overflow: hidden;
 }
-@media screen and (min-width: 768px) {
+
+.icon-arrow-back-ios-rounded {
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  width: 20px;
+  height: 20px;
+  fill: #4f2ee8;
+}
+.icon-arrow-back-ios-rounded {
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  width: 20px;
+  height: 20px;
+  fill: #4f2ee8;
+}
+
+.support__img {
+  // max-width: 115px;
+  max-height: 32px;
+  padding-left: 28px;
+  margin-bottom: 20px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(350%)
+    contrast(500%);
+}
+
+@media screen and (min-width: 375px) {
   .support_Ukraine_list {
     height: 292px;
-    margin-bottom: 40px;
   }
 }
 
@@ -116,6 +193,7 @@
   max-height: 32px;
   padding-left: 28px;
   margin-bottom: 18px;
+
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(350%)
     contrast(500%);
 }
@@ -124,6 +202,9 @@
   border-bottom: 1px solid rgb(255, 0, 0);
 }
 
+.support_Ukraine_list_ol {
+  position: relative;
+}
 .support_Ukraine_list_ol {
   position: relative;
 }

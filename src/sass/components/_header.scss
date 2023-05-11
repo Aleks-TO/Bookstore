@@ -1,0 +1,323 @@
+/* Хедер */
+.header {
+  background-color: #ffffff;
+  border: 1.5px solid #111111;
+  border-radius: 0px 0px 8px 8px;
+  width: 1440px;
+  height: 72px;
+  nav {
+    display: flex;
+  }
+}
+
+// Логотип
+.logo {
+  width: 109px;
+  height: auto;
+
+  margin: 22px 0px 22px 24px;
+}
+
+.invisible{
+  display: none;
+}
+
+/* Інпут(чекбокс) */
+.toggler {
+  margin: 24px 24px 0px 1035px;
+  input {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+  }
+  label {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: transparent;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+/* Чекбокс "до" */
+.toggler label::after {
+  display: block;
+  position: absolute;
+  content: '';
+  left: 1px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1),
+    1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggler input:checked + label {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: switch_color 0.3s linear;
+}
+
+.toggler input:not(:checked) + label {
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Продовжити анімацію до кінця навіть після завершення */
+.toggler input:checked + label:active {
+  animation: none;
+}
+
+.toggler input:checked + label::after {
+  left: 21px;
+  animation: smooth_entry 0.3s linear;
+}
+
+.toggler input:not(:checked) + label::after {
+  animation: smooth_exit 0.3s linear;
+}
+
+/* Анімація плавного чекбоксу "запам'ятовування" */
+@keyframes smooth_entry {
+  0% {
+    left: 1px;
+  }
+
+  100% {
+    left: 21px;
+  }
+}
+
+/* Анімація плавного чекбоксу "забування" */
+@keyframes smooth_exit {
+  0% {
+    left: 21px;
+  }
+
+  100% {
+    left: 1px;
+  }
+}
+
+/* Анімація плавної зміни кольору */
+@keyframes switch_color {
+  0% {
+    background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  100% {
+    background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Кнопка "Sign up" */
+.btn-sign_up {
+  width: 184px;
+  height: 48px;
+  background: #4f2ee8;
+  border: 1.5px solid #111111;
+  border-radius: 18px;
+  margin: 12px 0px 12px 0px;
+  cursor: pointer;
+
+  span {
+    width: 46px;
+    height: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    float: left;
+    margin: 15px 0px 15px 14px;
+  }
+  svg {
+    float: right;
+    margin: 14px 14px 0px 0px;
+  }
+}
+.burger-menu {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.modal-menu {
+  display: none;
+  opacity: 0;
+}
+
+.modal-overlay {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Адаптив */
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .header {
+    width: 768px;
+    height: 72px;
+  }
+
+  .logo {
+    margin: 22px 0px 22px 32px;
+  }
+
+  .toggler {
+    margin: 24px 24px 24px 347px;
+  }
+
+  .btn-sign_up {
+    width: 184px;
+    height: 48px;
+    background: #4f2ee8;
+    border: 1.5px solid #111111;
+    border-radius: 18px;
+    margin: 14px 32px 13px 0px;
+
+    svg {
+      position: absolute;
+      margin: 0;
+      margin-top: 14px;
+      margin-left: 25px;
+    }
+  }
+  .burger-menu {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+  }
+}
+
+/* 375px */
+@media screen and (max-width: 375px) {
+  .header {
+    width: 375px;
+    height: 64px;
+  }
+
+  .logo {
+    margin: 18px 0px 18px 20px;
+  }
+
+  .toggler {
+    margin: 20px 21px 20px 144px;
+  }
+
+  .btn-sign_up {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .burger-menu {
+    display: block;
+    opacity: 1;
+    width: 28px;
+    height: 28px;
+    margin: 18px 20px 18px 0px;
+
+    svg {
+      stroke: black;
+    }
+  }
+  /* Анімація плавного чекбоксу "запам'ятовування" */
+  @keyframes smooth_entry {
+    0% {
+      left: 1px;
+    }
+
+    100% {
+      left: 21px;
+    }
+  }
+
+  /* Анімація плавного чекбоксу "забування" */
+  @keyframes smooth_exit {
+    0% {
+      left: 21px;
+    }
+
+    100% {
+      left: 1px;
+    }
+  }
+
+  /* Анімація плавної зміни кольору */
+  @keyframes switch_color {
+    0% {
+      background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+      background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 64px);
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      183.6% 183.01% at 59.76% -23.42%,
+      #4f2ee8 18.03%,
+      #ffffff 100%
+    );
+
+    button {
+      width: 184px;
+      height: 48px;
+      background: #4f2ee8;
+      border: 1.5px solid #111111;
+      border-radius: 18px;
+      margin-top: 40px;
+      margin-left: 20px;
+      color: #ffffff;
+    }
+
+    span {
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    svg {
+      margin-top: 10px;
+      margin-left: 140px;
+    }
+
+    img {
+      margin-top: 290.53px;
+    }
+  }
+
+  .modal-overlay.show {
+    display: flex;
+  }
+}
