@@ -1,19 +1,10 @@
 /* Хедер */
-*{
-  margin: 0 auto;
-}
-header {
-  max-width: 100%;
-  margin: 0 auto;
-}
 .header {
   background-color: #ffffff;
   border: 1.5px solid #111111;
   border-radius: 0px 0px 8px 8px;
-  width: 100%;
+  width: 1440px;
   height: 72px;
-  margin: 0 auto;
-
   nav {
     display: flex;
   }
@@ -27,18 +18,18 @@ header {
   margin: 22px 0px 22px 24px;
 }
 
-.invisible {
+.invisible{
   display: none;
 }
 
 /* Інпут(чекбокс) */
 .toggler {
+  margin: 24px 24px 0px 1035px;
   input {
     display: none;
     opacity: 0;
     overflow: hidden;
   }
-
   label {
     display: block;
     position: relative;
@@ -148,13 +139,11 @@ header {
     float: left;
     margin: 15px 0px 15px 14px;
   }
-
   svg {
     float: right;
     margin: 14px 14px 0px 0px;
   }
 }
-
 .burger-menu {
   display: none;
   opacity: 0;
@@ -172,78 +161,21 @@ header {
   overflow: hidden;
 }
 
-.buttons__container {
-  display: flex;
-  gap: 24px;
-  margin-left: 76px;
-  margin-top: 19px;
+/* Адаптив */
 
-  .btn-home {
-    width: 72px;
-    height: 34px;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 8px 16px;
-    background-color: transparent;
-    border: transparent;
-    border-radius: 36px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 300ms;
-
-    &:hover {
-      background-color: #eac645;
-    }
-    &:focus {
-      background-color: #eac645;
-    }
-    &:active {
-      background-color: #eac645;
-    }
+/* 768px */
+@media screen and (max-width: 768px) {
+  .header {
+    width: 768px;
+    height: 72px;
   }
 
-  .btn-shop {
-    width: 133px;
-    height: 34px;
-    flex-direction: row;
-    align-items: flex-start;
-    border: transparent;
-    background-color: transparent;
-    border-radius: 36px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: -0.04em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 300ms;
-
-    svg {
-      position: absolute;
-      margin-left: 4px;
-      stroke: black;
-    }
-
-    &:hover {
-      background-color: #eac645;
-    }
-
-    
-  }
-}
-
-/* Tablet */
-@media screen and (min-width: 768px) {
   .logo {
-    margin: 22px 40px 22px 32px;
+    margin: 22px 0px 22px 32px;
   }
 
   .toggler {
-    margin: 24px 24px 24px 103px;
+    margin: 24px 24px 24px 347px;
   }
 
   .btn-sign_up {
@@ -266,18 +198,12 @@ header {
     opacity: 0;
     overflow: hidden;
   }
-    .buttons__container {
-      display: flex;
-      gap: 16px;
-      margin-left: 40px;
-      margin-top: 19px;
-    }
 }
 
-/* Mobile */
-@media screen and (max-width: 767px) {
+/* 375px */
+@media screen and (max-width: 375px) {
   .header {
-    max-width: 767px;
+    width: 375px;
     height: 64px;
   }
 
@@ -387,19 +313,11 @@ header {
     }
 
     img {
-      margin: 0 auto;
       margin-top: 290.53px;
-      width: 100%;
     }
   }
 
   .modal-overlay.show {
     display: flex;
   }
-
-    .buttons__container {
-      display: none;
-      opacity: 0;
-      overflow: hidden;
-    }
 }

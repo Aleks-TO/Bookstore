@@ -1,59 +1,60 @@
 import { getListTopBooks } from './bestseller.js';
-import { getbookListByCategory, renderMarkupBestseller, renderMarkupCategory, performListName, fetchcategoryByName, fetchTopBooks } from './bestseller.js';
+import {
+  getbookListByCategory,
+  renderMarkupBestseller,
+  renderMarkupCategory,
+  performListName,
+  fetchcategoryByName,
+  fetchTopBooks,
+} from './bestseller.js';
 
 const categoryList = document.querySelector('.siteBar-category-list');
 
-const bestsellerContainer = document.querySelector(".bestseller-container")
-let listOfFetchingCategory = []
+const bestsellerContainer = document.querySelector('.bestseller-container');
+
 categoryList.addEventListener('click', onClickCategory);
 
-
 function onClickCategory(event) {
- event.preventDefault();
- const eventTarget = event.target;
- const onCategoryClick = eventTarget.classList.contains('siteBar-item-link');
- const allCategoryList = eventTarget.classList.contains('siteBar-item-links');
+  event.preventDefault();
+  const eventTarget = event.target;
+  const onCategoryClick = eventTarget.classList.contains('siteBar-item-link');
+  const allCategoryList = eventTarget.classList.contains('siteBar-item-links');
 
- let listName = event.target.textContent;
+  let listName = event.target.textContent;
 
- if (!(onCategoryClick || allCategoryList)) {
- return
- }
- if (allCategoryList) {
- getListTopBooks()
-
- if ((categoryList.querySelector(`.active`))!==null) {categoryList.querySelector(`.active`).classList.remove('active')}
- }
- if (onCategoryClick) {
- getbookListByCategory(listName)
-
- highlightCategory(listName)
-
- }
-
-};
-
-
+  if (!(onCategoryClick || allCategoryList)) {
+    return;
+  }
+  if (allCategoryList) {
+    getListTopBooks();
+  }
+  if (onCategoryClick) {
+    getbookListByCategory(listName);
+  }
+}
 
 async function fetchCategories() {
- try {
- const response = await fetch("https://books-backend.p.goit.global/books/category-list");
- let books = await response.json();
- listOfFetchingCategory = [...books]
- const makeupListCategory = books.map((book) => {
+  try {
+    const response = await fetch(
+      'https://books-backend.p.goit.global/books/category-list'
+    );
+    const books = await response.json();
 
- return renderBookList(book);
- }).join('');
+    const makeupListCategory = books
+      .map(book => {
+        return renderBookList(book);
+      })
+      .join('');
 
- categoryList.insertAdjacentHTML("beforeend", makeupListCategory);
- } catch (error) {
- console.error(error);
- }
+    // console.log(books);
+    categoryList.insertAdjacentHTML('beforeend', makeupListCategory);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function renderBookList({ list_name }) {
-
- return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#" data-buttonid="${list_name}">${list_name}</a></li>`;
+  return `<li class="siteBar-category-item"><a class="siteBar-item-link" href="#" data-buttonid="${list_name}">${list_name}</a></li>`;
 }
 
 fetchCategories();
@@ -61,38 +62,25 @@ fetchCategories();
 /*підсвітка*/
 
 window.onload = function () {
- document.querySelector('.siteBar-item-links').focus();
+  document.querySelector('.siteBar-item-links').focus();
 };
 
-bestsellerContainer.addEventListener('click', (event) => {
- if (event.target.classList.contains("bestseller-see-more")) {
- let category = event.target.dataset.buttonid;
-
- let indexOfCategory = listOfFetchingCategory.indexOf(category)
-//  console.log(indexOfCategory)
-//  console.log(category)
-//  console.log(listOfFetchingCategory)
-//  listOfFetchingCategory.map(({list_name})=>{console.log(list_name)})
- highlightCategory(category);
-
- }
+bestsellerContainer.addEventListener('click', event => {
+  if (event.target.classList.contains('bestseller-see-more')) {
+    let category = event.target.dataset.buttonid;
+    getbookListByCategory(category);
+    highlightCategory(category);
+  }
 });
 
 function highlightCategory(category) {
-
- const selectedCategory = categoryList.querySelector(`[data-buttonid="${category}"]`)
- const activeCategory = categoryList.querySelector(`.active`)
-
-
- if (activeCategory===null) {selectedCategory.classList.add('active')}
- else { if (selectedCategory.dataset.buttonid!==activeCategory.dataset.buttonid) {
- selectedCategory.classList.add('active')
- activeCategory.classList.remove('active')
- }
-
- }
-
- // if ((categoryList.querySelector(`.active`))!==null) {books=[(categoryList.querySelector(`.active`).dataset.buttonid),...books]}
-
+  const allCategoryLink = document.querySelectorAll('.siteBar-category-link');
+  allCategoryLink.forEach(link => {
+    if (link.dataset.category === category) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+    console.log(link.dataset.buttonid);
+  });
 }
-
