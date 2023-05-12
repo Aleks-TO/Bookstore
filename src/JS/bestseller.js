@@ -213,7 +213,9 @@ function onClickBestseller(event) {
           bookModal.KEY_SHOP_LIST,
           JSON.stringify(bookModal.shopList)
         );
-        onCloseModal();
+        shoppingBtn.textContent = 'remove from the shopping list';
+        shoppingBtn.nextElementSibling.style.display = 'block';
+        // onCloseModal();
         return;
       } else if (bookModal.has(selectBook.id)) {
         if (localStorage.getItem(bookModal.KEY_SHOP_LIST) === null) {
@@ -221,7 +223,9 @@ function onClickBestseller(event) {
             bookModal.KEY_SHOP_LIST,
             JSON.stringify(bookModal.shopList)
           );
-          onCloseModal();
+          shoppingBtn.textContent = 'remove from the shopping list';
+          shoppingBtn.nextElementSibling.style.display = 'block';
+          // onCloseModal();
           return;
         }
         bookModal.shopList = JSON.parse(
@@ -232,6 +236,9 @@ function onClickBestseller(event) {
           bookModal.KEY_SHOP_LIST,
           JSON.stringify(bookModal.shopList)
         );
+        shoppingBtn.textContent = 'add to shopping list';
+        shoppingBtn.nextElementSibling.style.display = 'none';
+        return;
       } else if (!bookModal.has(selectBook.id)) {
         bookModal.shopList = JSON.parse(
           localStorage.getItem(bookModal.KEY_SHOP_LIST)
@@ -241,13 +248,17 @@ function onClickBestseller(event) {
           bookModal.KEY_SHOP_LIST,
           JSON.stringify(bookModal.shopList)
         );
+        shoppingBtn.textContent = 'remove from the shopping list';
+        shoppingBtn.nextElementSibling.style.display = 'block';
       } else {
         localStorage.setItem(
           bookModal.KEY_SHOP_LIST,
           JSON.stringify(bookModal.shopList)
         );
+        shoppingBtn.textContent = 'remove from the shopping list';
+        shoppingBtn.nextElementSibling.style.display = 'block';
       }
-      onCloseModal();
+      //onCloseModal();
     }
 
     function funHelp(event) {
