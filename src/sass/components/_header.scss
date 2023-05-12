@@ -3,7 +3,7 @@
   background-color: #ffffff;
   border: 1.5px solid #111111;
   border-radius: 0px 0px 8px 8px;
-  width: 1440px;
+  // width: 1440px;
   height: 72px;
   nav {
     display: flex;
@@ -15,16 +15,16 @@
   width: 109px;
   height: auto;
 
-  margin: 22px 0px 22px 24px;
+  // margin: 22px 0px 22px 24px;
 }
 
-.invisible{
+.invisible {
   display: none;
 }
 
 /* Інпут(чекбокс) */
 .toggler {
-  margin: 24px 24px 0px 1035px;
+  // margin: 24px 24px 0px 1035px;
   input {
     display: none;
     opacity: 0;
@@ -81,6 +81,11 @@
 
 .toggler input:not(:checked) + label::after {
   animation: smooth_exit 0.3s linear;
+}
+
+.home-btn,
+.shoplist-btn {
+  display: none;
 }
 
 /* Анімація плавного чекбоксу "запам'ятовування" */
@@ -166,16 +171,16 @@
 /* 768px */
 @media screen and (max-width: 768px) {
   .header {
-    width: 768px;
+    // width: 768px;
     height: 72px;
   }
 
   .logo {
-    margin: 22px 0px 22px 32px;
+    // margin: 22px 0px 22px 32px;
   }
 
   .toggler {
-    margin: 24px 24px 24px 347px;
+    // margin: 24px 24px 24px 347px;
   }
 
   .btn-sign_up {
@@ -203,8 +208,8 @@
 /* 375px */
 @media screen and (max-width: 375px) {
   .header {
-    width: 375px;
-    height: 64px;
+    // width: 375px;
+    // height: 64px;
   }
 
   .logo {
