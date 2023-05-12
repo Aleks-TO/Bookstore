@@ -16,6 +16,8 @@ Loading.hourglass();
 import bookAPI from './fetch-api/fetch-api.js';
 const bookParams = new bookAPI();
 
+const KEY_FOR_SHOPLIST = 'BOOKSTORE_SHOPLIST';
+
 async function fetchcategoryByName(name) {
   const response = await fetch(
     `https://books-backend.p.goit.global/books/category?category=${name}`
@@ -135,8 +137,9 @@ function onClickBestseller(event) {
     // console.log(bookId);
     // ********* логика модального вікна, вибраної кніжки *****************
     bookParams.getBookById(bookId).then(book => {
-      // console.log(book);
       // bookModal.renderShops(book);
+      // console.log(book._id);
+
       bookModal.hangLinks(book);
       bookTitle.textContent = book.title;
       bookAuthor.textContent = book.author;
@@ -147,7 +150,13 @@ function onClickBestseller(event) {
 
       document.addEventListener('keydown', funHelp);
 
-      if (localStorage.getItem(book._id) === null) {
+      bookModal.shopList = JSON.parse(localStorage.getItem(KEY_FOR_SHOPLIST));
+
+      if (bookModal.shopList === null) {
+        bookModal.shopList = {};
+      }
+
+      if (bookModal.shopList === null || !bookModal.has(book._id)) {
         shoppingBtn.textContent = 'add to shopping list';
         shoppingBtn.nextElementSibling.style.display = 'none';
       } else {
@@ -183,15 +192,22 @@ function onClickBestseller(event) {
     }
 
     function onClickShoppingBtn(event) {
-      console.log(event.target.settingsBook);
+      const selectBook = event.target.settingsBook;
 
-      if (localStorage.getItem(event.target.settingsBook.id) === null) {
+      if (bookModal.shopList === null || !bookModal.has(selectBook.id)) {
+        bookModal.set(selectBook);
+
         localStorage.setItem(
-          event.target.settingsBook.id,
-          JSON.stringify(event.target.settingsBook)
+          KEY_FOR_SHOPLIST,
+          JSON.stringify(bookModal.shopList)
         );
       } else {
-        localStorage.removeItem(event.target.settingsBook.id);
+        delete bookModal.shopList[selectBook.id];
+
+        localStorage.setItem(
+          KEY_FOR_SHOPLIST,
+          JSON.stringify(bookModal.shopList)
+        );
       }
       onCloseModal();
     }
