@@ -194,7 +194,14 @@ function onClickBestseller(event) {
     function onClickShoppingBtn(event) {
       // console.log(event.target.settingsBook);
       const selectBook = event.target.settingsBook;
-      console.log(bookModal.shopList);
+      bookModal.shopList = JSON.parse(
+        localStorage.getItem(bookModal.KEY_SHOP_LIST)
+      );
+
+      if (bookModal.shopList === null) {
+        bookModal.shopList = {};
+      }
+      console.log('bookModal.shopList: ', bookModal.shopList);
       console.log(Object.keys(bookModal.shopList).length);
       if (
         bookModal.shopList === null ||
