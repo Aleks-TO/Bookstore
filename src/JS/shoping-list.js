@@ -1,3 +1,4 @@
+
 //тут має бути масив з ЛОкал стореджа!!! не забудьте розпарсити
 // const arr = [
 //   {
@@ -141,6 +142,11 @@
 //     ],
 //   },
 // ];
+import saveTheChildren from '../images/icons-img/books.png';
+import linkBook from '../images/icons-img/book.png';
+import linkAmazon from '../images/icons-img/amazon.png';
+import closeSvg from '../images/img-symbols/symbol-defs.svg#icon-basket';
+
 const arr = Object.values(JSON.parse(localStorage.getItem("BOOKSTORE_SHOP_LIST")))
 const ulEl = document.querySelector('.shoping-list-ul2');
 
@@ -161,7 +167,7 @@ function renderList(arr) {
                       <li class="shopping-list-link">
                         <a href="${buy_links[0].url}"target="_blank"
                           ><img
-                            src="./images/icons-img/amazon.png"
+                            src="${linkAmazon}"
                             alt="amazon"
                             class="shopping-list-buy-link"
                         /></a>
@@ -169,7 +175,7 @@ function renderList(arr) {
                       <li class="shopping-list-link">
                         <a href="${buy_links[3].url}"target="_blank"
                           ><img
-                            src="./images/icons-img/book.png"
+                            src="${linkBook}"
                             alt="book"
                             class="shopping-list-buy-link"
                         /></a>
@@ -177,7 +183,7 @@ function renderList(arr) {
                       <li class="shopping-list-link">
                         <a href="${buy_links[4].url}"target="_blank"
                           ><img
-                            src="./images/icons-img/books.png"
+                            src="${saveTheChildren}"
                             alt=""
                             class="shopping-list-buy-link"
                         /></a>
@@ -187,7 +193,7 @@ function renderList(arr) {
                   <button class="shopping-list-delete-book-bnt" type="button">
                     <svg class="shopping-list-icon">
                       <use
-                        href="./images/img-symbols/symbol-defs.svg#icon-basket"
+                        href="${closeSvg}"
                       ></use>
                     </svg>
                   </button>
