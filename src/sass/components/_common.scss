@@ -185,11 +185,11 @@ main {
 
 // shopping сторінка
 
-.wrapper{
+.wrapper {
   margin: 0 auto;
 }
 
-.shopping-main{
+.shopping-main {
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -202,9 +202,9 @@ main {
     gap: 100px;
   }
 
-  .support_Ukraine{
-    display: none;
-  }
+  // .support_Ukraine{
+  //   display: none;
+  // }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .shopping-main {
@@ -213,15 +213,15 @@ main {
     align-items: center;
 
     gap: 40px;
-
   }
 
-  .support_Ukraine{
-    display: none;
-  }
+  // .support_Ukraine{
+  //   display: none;
+  // }
 }
 
-
-ul, .shoping-list-ul, .shoping-list-ul2{
+ul,
+.shoping-list-ul,
+.shoping-list-ul2 {
   padding-right: 0;
 }
