@@ -69,3 +69,5 @@ function turnWhiteModeOn(){
   refs.closeBtn.style.backgroundImage = `url(${closeBtnDark})`;
   refs.amazonIcon.src = `${amazonLogoDark}`;
 }
+
+let a =5;
