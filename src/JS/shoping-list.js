@@ -1,149 +1,149 @@
 //тут має бути масив з ЛОкал стореджа!!! не забудьте розпарсити
-const arr = [
-  {
-    id: '643282b1e85766588626a0ba',
-    title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
-    author: 'Shannon Bream',
-    description:
-      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
-    book_image:
-      'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
-    buy_links: [
-      {
-        name: 'Amazon',
-        url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
-      },
-      {
-        name: 'Apple Books',
-        url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
-      },
-      {
-        name: 'Barnes and Noble',
-        url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
-      },
-      {
-        name: 'Books-A-Million',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
-      },
-      {
-        name: 'Bookshop',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
-      },
-      {
-        name: 'IndieBound',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
-      },
-    ],
-  },
-  {
-    id: '643282b1e85766588626a0ba',
-    title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
-    author: 'Shannon Bream',
-    description:
-      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
-    book_image:
-      'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
-    buy_links: [
-      {
-        name: 'Amazon',
-        url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
-      },
-      {
-        name: 'Apple Books',
-        url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
-      },
-      {
-        name: 'Barnes and Noble',
-        url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
-      },
-      {
-        name: 'Books-A-Million',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
-      },
-      {
-        name: 'Bookshop',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
-      },
-      {
-        name: 'IndieBound',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
-      },
-    ],
-  },
-  {
-    id: '643282b1e85766588626a0ba',
-    title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
-    author: 'Shannon Bream',
-    description:
-      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
-    book_image:
-      'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
-    buy_links: [
-      {
-        name: 'Amazon',
-        url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
-      },
-      {
-        name: 'Apple Books',
-        url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
-      },
-      {
-        name: 'Barnes and Noble',
-        url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
-      },
-      {
-        name: 'Books-A-Million',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
-      },
-      {
-        name: 'Bookshop',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
-      },
-      {
-        name: 'IndieBound',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
-      },
-    ],
-  },
-  {
-    id: '643282b1e85766588626a0ba',
-    title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
-    author: 'Shannon Bream',
-    description:
-      'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
-    book_image:
-      'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
-    buy_links: [
-      {
-        name: 'Amazon',
-        url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
-      },
-      {
-        name: 'Apple Books',
-        url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
-      },
-      {
-        name: 'Barnes and Noble',
-        url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
-      },
-      {
-        name: 'Books-A-Million',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
-      },
-      {
-        name: 'Bookshop',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
-      },
-      {
-        name: 'IndieBound',
-        url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
-      },
-    ],
-  },
-];
-
+// const arr = [
+//   {
+//     id: '643282b1e85766588626a0ba',
+//     title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
+//     author: 'Shannon Bream',
+//     description:
+//       'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
+//     book_image:
+//       'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
+//     buy_links: [
+//       {
+//         name: 'Amazon',
+//         url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
+//       },
+//       {
+//         name: 'Apple Books',
+//         url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
+//       },
+//       {
+//         name: 'Barnes and Noble',
+//         url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
+//       },
+//       {
+//         name: 'Books-A-Million',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
+//       },
+//       {
+//         name: 'Bookshop',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
+//       },
+//       {
+//         name: 'IndieBound',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
+//       },
+//     ],
+//   },
+//   {
+//     id: '643282b1e85766588626a0ba',
+//     title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
+//     author: 'Shannon Bream',
+//     description:
+//       'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
+//     book_image:
+//       'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
+//     buy_links: [
+//       {
+//         name: 'Amazon',
+//         url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
+//       },
+//       {
+//         name: 'Apple Books',
+//         url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
+//       },
+//       {
+//         name: 'Barnes and Noble',
+//         url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
+//       },
+//       {
+//         name: 'Books-A-Million',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
+//       },
+//       {
+//         name: 'Bookshop',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
+//       },
+//       {
+//         name: 'IndieBound',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
+//       },
+//     ],
+//   },
+//   {
+//     id: '643282b1e85766588626a0ba',
+//     title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
+//     author: 'Shannon Bream',
+//     description:
+//       'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
+//     book_image:
+//       'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
+//     buy_links: [
+//       {
+//         name: 'Amazon',
+//         url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
+//       },
+//       {
+//         name: 'Apple Books',
+//         url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
+//       },
+//       {
+//         name: 'Barnes and Noble',
+//         url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
+//       },
+//       {
+//         name: 'Books-A-Million',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
+//       },
+//       {
+//         name: 'Bookshop',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
+//       },
+//       {
+//         name: 'IndieBound',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
+//       },
+//     ],
+//   },
+//   {
+//     id: '643282b1e85766588626a0ba',
+//     title: 'THE LOVE STORIES OF THE BIBLE SPEAK',
+//     author: 'Shannon Bream',
+//     description:
+//       'David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short  drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when  David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall.',
+//     book_image:
+//       'https://storage.googleapis.com/du-prd/books/images/9780063226050.jpg',
+//     buy_links: [
+//       {
+//         name: 'Amazon',
+//         url: 'https://www.amazon.com/dp/0063226057?tag=NYTBSREV-20',
+//       },
+//       {
+//         name: 'Apple Books',
+//         url: 'https://goto.applebooks.apple/9780063226050?at=10lIEQ',
+//       },
+//       {
+//         name: 'Barnes and Noble',
+//         url: 'https://www.anrdoezrs.net/click-7990613-11819508?url=https%3A%2F%2Fwww.barnesandnoble.com%2Fw%2F%3Fean%3D9780063226050',
+//       },
+//       {
+//         name: 'Books-A-Million',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fp%252FTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252FShannon%252BBream%252F9780063226050&url2=https%3A%2F%2Fwww.anrdoezrs.net%2Fclick-7990613-35140%3Furl%3Dhttps%253A%252F%252Fwww.booksamillion.com%252Fsearch%253Fquery%253DTHE%252BLOVE%252BSTORIES%252BOF%252BTHE%252BBIBLE%252BSPEAK%252BShannon%252BBream',
+//       },
+//       {
+//         name: 'Bookshop',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fbookshop.org%2Fa%2F3546%2F9780063226050&url2=https%3A%2F%2Fbookshop.org%2Fbooks%3Faffiliate%3D3546%26keywords%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK',
+//       },
+//       {
+//         name: 'IndieBound',
+//         url: 'https://du-gae-books-dot-nyt-du-prd.appspot.com/redirect?url1=https%3A%2F%2Fwww.indiebound.org%2Fbook%2F9780063226050%3Faff%3DNYT&url2=https%3A%2F%2Fwww.indiebound.org%2Fsearch%2Fbook%3Fkeys%3DTHE%2BLOVE%2BSTORIES%2BOF%2BTHE%2BBIBLE%2BSPEAK%2BShannon%2BBream%26aff%3DNYT',
+//       },
+//     ],
+//   },
+// ];
+const arr = Object.values(JSON.parse(localStorage.getItem("BOOKSTORE_SHOP_LIST")))
 const ulEl = document.querySelector('.shoping-list-ul2');
-const bntEl = document.querySelector('.shopping-list-delete-book-bnt');
+
 
 function renderList(arr) {
   const mappedArray = arr
@@ -200,7 +200,7 @@ function renderList(arr) {
 }
 
 renderList(arr);
-
+const bntEl = document.querySelector('.shopping-list-delete-book-bnt');
 bntEl.addEventListener('click', deleteBook);
 
 function deleteBook() {
