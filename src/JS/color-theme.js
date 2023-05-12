@@ -54,9 +54,16 @@ function turnDarkModeOn (){
   refs.theme.setAttribute('checked', 'true');
 
   // білі іконки
-  refs.closeBtn.style.backgroundImage = `url(${closeBtnWhite})`;
   refs.logo.innerHTML = `<use href=${svg}#logo-white ></use>`;
-  refs.amazonIcon.src = `${amazonLogoWhite}`;
+    if (refs.closeBtn){
+      refs.closeBtn.style.backgroundImage = `url(${closeBtnWhite})`;
+
+    }
+
+  if (refs.amazonIcon){
+    refs.amazonIcon.src = `${amazonLogoWhite}`;
+
+  }
 }
 
 function turnWhiteModeOn(){
@@ -66,6 +73,13 @@ function turnWhiteModeOn(){
   
   // темні іконки
   refs.logo.innerHTML = `<use href=${svg}#logo-black ></use>`;
-  refs.closeBtn.style.backgroundImage = `url(${closeBtnDark})`;
-  refs.amazonIcon.src = `${amazonLogoDark}`;
+
+  if (refs.closeBtn){
+    refs.closeBtn.style.backgroundImage = `url(${closeBtnDark})`;
+  }
+  if (refs.amazonIcon){
+    refs.amazonIcon.src = `${amazonLogoDark}`;
+  }
+
+  
 }
