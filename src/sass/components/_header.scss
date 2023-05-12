@@ -1,10 +1,19 @@
 /* Хедер */
+* {
+  margin: 0 auto;
+}
+header {
+  max-width: 100%;
+  margin: 0 auto;
+}
 .header {
   background-color: #ffffff;
   border: 1.5px solid #111111;
   border-radius: 0px 0px 8px 8px;
-  // width: 1440px;
+  width: 1440px;
   height: 72px;
+  margin: 0 auto;
+
   nav {
     display: flex;
   }
@@ -24,12 +33,13 @@
 
 /* Інпут(чекбокс) */
 .toggler {
-  // margin: 24px 24px 0px 1035px;
+  margin: 24px 24px 0px 1035px;
   input {
     display: none;
     opacity: 0;
     overflow: hidden;
   }
+
   label {
     display: block;
     position: relative;
@@ -144,11 +154,13 @@
     float: left;
     margin: 15px 0px 15px 14px;
   }
+
   svg {
     float: right;
     margin: 14px 14px 0px 0px;
   }
 }
+
 .burger-menu {
   display: none;
   opacity: 0;
@@ -166,21 +178,72 @@
   overflow: hidden;
 }
 
-/* Адаптив */
+.buttons__container {
+  display: flex;
+  gap: 24px;
+  margin-left: 76px;
+  margin-top: 19px;
+
+  .btn-home {
+    width: 72px;
+    height: 34px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 36px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 300ms;
 
 /* 768px */
 @media screen and (max-width: 768px) {
   .header {
-    // width: 768px;
+    width: 768px;
     height: 72px;
   }
 
+  .btn-shop {
+    width: 133px;
+    height: 34px;
+    flex-direction: row;
+    align-items: flex-start;
+    border: transparent;
+    background-color: transparent;
+    border-radius: 36px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 300ms;
+
+    svg {
+      position: absolute;
+      margin-left: 4px;
+      // stroke: black;
+    }
+
+    &:hover {
+      background-color: #eac645;
+    }
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
   .logo {
-    // margin: 22px 0px 22px 32px;
+    margin: 22px 0px 22px 32px;
   }
 
   .toggler {
-    // margin: 24px 24px 24px 347px;
+    margin: 24px 24px 24px 347px;
   }
 
   .btn-sign_up {
@@ -203,13 +266,19 @@
     opacity: 0;
     overflow: hidden;
   }
+  .buttons__container {
+    display: flex;
+    gap: 16px;
+    margin-left: 40px;
+    margin-top: 19px;
+  }
 }
 
-/* 375px */
-@media screen and (max-width: 375px) {
+/* Mobile */
+@media screen and (max-width: 767px) {
   .header {
-    // width: 375px;
-    // height: 64px;
+    width: 375px;
+    height: 64px;
   }
 
   .logo {
@@ -318,11 +387,19 @@
     }
 
     img {
+      margin: 0 auto;
       margin-top: 290.53px;
+      width: 100%;
     }
   }
 
   .modal-overlay.show {
     display: flex;
+  }
+
+  .buttons__container {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
   }
 }

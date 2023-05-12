@@ -1,0 +1,128 @@
+.shoping-list {
+}
+.ff {
+  position: relative;
+  padding: 10px;
+  width: 335px;
+  max-height: 170px;
+  background: #ffffff;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  border-radius: 16px;
+}
+
+.shopping-list-conteiner {
+  display: flex;
+}
+.shoping-list-title-book {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 0;
+}
+.shoping-list-book-wrap {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b4afaf;
+}
+.shoping-list-book-description {
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+
+  margin: 0;
+  margin-bottom: 16px;
+  width: 193px;
+  height: 68px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: #111111;
+}
+
+.shoping-list-book-autor {
+  margin: 0px;
+  max-width: 100px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  height: 14px;
+  color: #b4afaf;
+}
+.shopping-list-link-shop {
+}
+.shoping-list-ul {
+  display: flex;
+  position: absolute;
+  margin: 0px;
+  bottom: 10px;
+  right: 14px;
+  /* transform: translate(50%, -50%) */
+}
+.shopping-list-link {
+  margin-bottom: 0px;
+  list-style-type: none;
+  margin-left: 8px;
+}
+
+.shopping-list-delete-book-bnt {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4f2ee8;
+}
+
+.test-img-css {
+  width: 100px;
+  height: 142px;
+  border: 2px solid tomato;
+  margin-right: 14px;
+}
+
+.shopping-list-buy-link {
+  max-height: 16px;
+}
+
+.shopping-list-icon {
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1440px) {
+  .ff {
+    width: 646px;
+    max-height: 213px;
+    padding: 24px;
+  }
+  .shoping-list-book-description {
+    width: 508px;
+    height: 53px;
+  }
+  .test-img-css {
+    margin-right: 24px;
+  }
+
+  .shoping-list-ul {
+    bottom: 24px;
+    right: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ff {
+    width: 990px;
+    max-height: 213px;
+  }
+  .shoping-list-book-description {
+    width: 808px;
+    height: 53px;
+  }
+}
