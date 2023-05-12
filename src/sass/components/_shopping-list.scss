@@ -1,3 +1,4 @@
+
 .shoping-list {
 }
 
@@ -7,6 +8,7 @@
   line-height: 52px;
   letter-spacing: -0.04em;
   color: #111111;
+  margin-top: 0;
 }
 
 .shoping-list-Title-span {
@@ -140,7 +142,12 @@
     max-height: 213px;
   }
   .shoping-list-book-description {
-    width: 808px;
+    width: 798px;
     height: 53px;
   }
+}
+
+.shoping-list-ul2{
+  padding:0;
+  margin: 0;
 }
