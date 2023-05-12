@@ -3,47 +3,29 @@
   margin: 0 auto;
 }
 header {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
-
 .header {
   background-color: #ffffff;
   border: 1.5px solid #111111;
   border-radius: 0px 0px 8px 8px;
-  width: 1440px;
+  width: 100%;
   height: 72px;
   margin: 0 auto;
 
   nav {
     display: flex;
-    justify-content: space-between;
   }
 }
 
 // Логотип
-// .logo  {
-//   width: 109px;
-//   height: auto;
-
-//   margin: 22px 0px 22px 24px;
-// }
-
-#logo  {
+.logo {
   width: 109px;
-  height: 28px;
+  height: auto;
+
+  margin: 22px 0px 22px 24px;
 }
-
-
-  // margin: 22px 0px 22px 24px;
-
-#logo use {
-  width: 109px;
-  height: 28px;
-  fill: white;
-}
-
-
 
 .invisible {
   display: none;
@@ -51,7 +33,6 @@ header {
 
 /* Інпут(чекбокс) */
 .toggler {
-  margin: 24px 24px 0px 1035px;
   input {
     display: none;
     opacity: 0;
@@ -109,11 +90,6 @@ header {
 
 .toggler input:not(:checked) + label::after {
   animation: smooth_exit 0.3s linear;
-}
-
-.home-btn,
-.shoplist-btn {
-  display: none;
 }
 
 /* Анімація плавного чекбоксу "запам'ятовування" */
@@ -219,16 +195,15 @@ header {
     cursor: pointer;
     transition: all 300ms;
 
-/* 768px */
-@media screen and (max-width: 768px) {
-  .header {
-    width: 768px;
-    height: 72px;
-  }
-
-
-  .active-page{
-    background-color: #eac645;
+    &:hover {
+      background-color: #eac645;
+    }
+    &:focus {
+      background-color: #eac645;
+    }
+    &:active {
+      background-color: #eac645;
+    }
   }
 
   .btn-shop {
@@ -262,11 +237,11 @@ header {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .logo {
-    margin: 22px 0px 22px 32px;
+    margin: 22px 40px 22px 32px;
   }
 
   .toggler {
-    margin: 24px 24px 24px 347px;
+    margin: 24px 24px 24px 103px;
   }
 
   .btn-sign_up {
@@ -300,7 +275,7 @@ header {
 /* Mobile */
 @media screen and (max-width: 767px) {
   .header {
-    width: 375px;
+    max-width: 767px;
     height: 64px;
   }
 

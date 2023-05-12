@@ -9,21 +9,10 @@ const shoppingBtn = document.getElementById('shoppingBtn');
 const closeBtn = document.querySelector('.closeBtn');
 const icon = document.querySelector('#bookModal .shops-icons');
 
-bookModal.shopList = {};
+// console.log(icon.children[0].children[0].href);
 
-bookModal.set = book => {
-  bookModal.shopList[book.id] = book;
-};
-
-bookModal.has = id => {
-  const keys = Object.keys(bookModal.shopList);
-  let is_cnt = false;
-  keys.forEach(k => {
-    if (k === id) is_cnt = true;
-  });
-
-  return is_cnt;
-};
+// icon.children[1].style.display = 'none';
+// icon.children[2].style.display = 'none';
 
 bookModal.hangLinks = function (book) {
   icon.children[0].children[0].href = book.buy_links[0].url;

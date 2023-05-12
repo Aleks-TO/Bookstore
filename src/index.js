@@ -8,5 +8,3 @@ import './JS/color-theme.js';
 
 import './JS/bookModal.js';
 import './JS/scrollUp.js';
-// import './shopping-list.js'; щось ламається
-
