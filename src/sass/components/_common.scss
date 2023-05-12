@@ -182,3 +182,17 @@ main {
     transform: scale(1.2);
   }
 }
+
+.wrapper{
+  margin: 0 auto;
+}
+
+.shopping-main{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+ul, .shoping-list-ul, .shoping-list-ul2{
+  padding-right: 0;
+}
