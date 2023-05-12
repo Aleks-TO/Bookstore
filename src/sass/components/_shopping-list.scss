@@ -1,7 +1,21 @@
 .shoping-list {
 }
-.ff {
+
+.shoping-list-Title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.04em;
+  color: #111111;
+}
+
+.shoping-list-Title-span {
+  color: #4f2ee8;
+}
+.shoping-list-book {
   position: relative;
+  margin-bottom: 20px;
+  list-style-type: none;
   padding: 10px;
   width: 335px;
   max-height: 170px;
@@ -80,10 +94,14 @@
   background-color: #4f2ee8;
 }
 
+.shopping-list-delete-book-bnt:hover,
+.shopping-list-delete-book-bnt:focus {
+  background-color: #2702ca;
+}
+
 .test-img-css {
   width: 100px;
   height: 142px;
-  border: 2px solid tomato;
   margin-right: 14px;
 }
 
@@ -97,7 +115,7 @@
 }
 
 @media screen and (min-width: 760px) and (max-width: 1440px) {
-  .ff {
+  .shoping-list-book {
     width: 646px;
     max-height: 213px;
     padding: 24px;
@@ -117,8 +135,8 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .ff {
-    width: 990px;
+  .shoping-list-book {
+    width: 938px;
     max-height: 213px;
   }
   .shoping-list-book-description {

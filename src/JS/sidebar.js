@@ -11,7 +11,7 @@ import {
 const categoryList = document.querySelector('.siteBar-category-list');
 
 const bestsellerContainer = document.querySelector('.bestseller-container');
-
+const listOfCategories = [];
 categoryList.addEventListener('click', onClickCategory);
 
 function onClickCategory(event) {
@@ -27,9 +27,11 @@ function onClickCategory(event) {
   }
   if (allCategoryList) {
     getListTopBooks();
+    if ((categoryList.querySelector(`.active`))!==null) {categoryList.querySelector(`.active`).classList.remove('active')}
   }
   if (onCategoryClick) {
     getbookListByCategory(listName);
+    highlightCategory(listName)
   }
 }
 
@@ -41,12 +43,14 @@ async function fetchCategories() {
     const books = await response.json();
 
     const makeupListCategory = books
-      .map(book => {
-        return renderBookList(book);
+      .map((book,index) => {
+       
+        listOfCategories[index] = book.list_name
+         return renderBookList(book);
       })
       .join('');
 
-    // console.log(books);
+   
     categoryList.insertAdjacentHTML('beforeend', makeupListCategory);
   } catch (error) {
     console.error(error);
@@ -68,19 +72,46 @@ window.onload = function () {
 bestsellerContainer.addEventListener('click', event => {
   if (event.target.classList.contains('bestseller-see-more')) {
     let category = event.target.dataset.buttonid;
-    getbookListByCategory(category);
+    
+    const sortedListCategories = sortCategories(listOfCategories,category)
+   
+     let markup = sortedListCategories.map((categoryName)=> {
+      let renderObj={list_name:categoryName}
+      return renderBookList(renderObj)}
+    
+    )
+    let markupTorender=`<li class="siteBar-category-item"><a class="siteBar-item-links" href="#">All categories</a></li>`+markup.join("");
+    categoryList.innerHTML=markupTorender;
     highlightCategory(category);
   }
 });
 
 function highlightCategory(category) {
-  const allCategoryLink = document.querySelectorAll('.siteBar-category-link');
-  allCategoryLink.forEach(link => {
-    if (link.dataset.category === category) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-    console.log(link.dataset.buttonid);
-  });
+  const selectedCategory = categoryList.querySelector(`[data-buttonid="${category}"]`)
+  const activeCategory = categoryList.querySelector(`.active`)
+  if (activeCategory===null) {selectedCategory.classList.add('active')}
+ else { if (selectedCategory.dataset.buttonid!==activeCategory.dataset.buttonid) {
+ selectedCategory.classList.add('active')
+ activeCategory.classList.remove('active')
+ }
+
+ }
+
+  // const allCategoryLink = document.querySelectorAll('.siteBar-category-link');
+  // allCategoryLink.forEach(link => {
+  //   if (link.dataset.category === category) {
+  //     link.classList.add('active');
+  //   } else {
+  //     link.classList.remove('active');
+  //   }
+  //   console.log(link.dataset.buttonid);
+  // });
+}
+function sortCategories(categories, selectedCategory) {
+let valueOffirstElenment = categories[0];
+categories[(categories.indexOf(selectedCategory))]= valueOffirstElenment
+categories[0]=selectedCategory
+
+return categories
+
 }

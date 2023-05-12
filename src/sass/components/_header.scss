@@ -1,5 +1,5 @@
 /* Хедер */
-* {
+.header * {
   margin: 0 auto;
 }
 header {
@@ -25,6 +25,11 @@ header {
   height: auto;
 
   margin: 22px 0px 22px 24px;
+}
+
+#logo  {
+  width: 109px;
+  height: 28px;
 }
 
 .invisible {
