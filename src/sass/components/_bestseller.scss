@@ -1,7 +1,7 @@
 .container {
   max-width: 1440px;
   display: flex;
-  gap:40px;
+  gap: 40px;
 
   // padding-left: 24px;
   // border: solid 2px palevioletred;
@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-
   }
 }
 
@@ -62,15 +61,14 @@
   text-align: center;
   padding-top: 14px;
   transition-property: color;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: background-color;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bestseller-button-container .bestseller-see-more:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: $color-accent-purple;
 }
 .bestseller-header {
@@ -146,8 +144,8 @@
   background: #eac645;
   border-radius: 0px 0px 8px 8px;
   transition-property: opacity;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bestseller-card-link:hover .bestseller-hover-button {
@@ -256,7 +254,6 @@
   border-radius: 8px 8px 8px 8px;
 }
 
-
 .category-header {
   margin-top: 0;
   margin-bottom: 40px;
@@ -268,9 +265,8 @@
   color: $color-accent-purple;
 }
 
-
 .category-card-thumb {
-   position: relative;
+  position: relative;
   margin-bottom: 14px;
 }
 .category-book-name {
@@ -325,12 +321,11 @@
 .category-card-link:hover .category-hover-button {
   opacity: 1;
 }
-.category-card-set-item{
+.category-card-set-item {
   margin-bottom: 40px;
 }
 
 @media screen and (min-width: 1440px) {
-  
   .category-card-set {
     margin-bottom: 32px;
   }
@@ -358,7 +353,6 @@
     max-width: 704px;
   }
 
-  
   .category-card-set {
     margin-bottom: 20px;
   }
@@ -378,20 +372,18 @@
     flex-wrap: wrap;
     gap: 25px;
   }
-  
 }
 
 @media screen and (max-width: 767px) {
   .category-container {
     max-width: 335px;
   }
-  
+
   .category-header {
     font-size: 32px;
     line-height: 1.19;
   }
 
-  
   .category-card-set {
     margin-bottom: 8px;
   }
@@ -406,7 +398,6 @@
   .category-card-set-item {
     max-width: 335px;
   }
-  
 }
 
 @media screen and (min-width: 768px) {
@@ -414,6 +405,4 @@
     font-size: 48px;
     line-height: 1.08;
   }
- 
 }
-
