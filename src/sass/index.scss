@@ -1,10 +1,10 @@
 // @import './utils/normalise'; // я бачу що вже з node підтягується, можу видалити
 @import './components/common';
 @import './utils/variables';
-// @import './header';
-// @import './sidebar';
+@import './components/sidebar';
+@import './components/header';
+@import './components/bestseller';
 @import './components/support';
-// @import './bestseller';
-// @import './modal-book-info';
-// @import './shopping-list';
+@import './components/bookModal';
+@import './components/shopping-list';
 // @import './bestseller';
