@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".burger-menu"),t=document.querySelector(".modal-overlay");document.querySelector(".close-icon");e.addEventListener("click",(function(){t.classList.toggle("show")}));var n=document.querySelector(".shoplist-btn");n.addEventListener("click",(function(e){window.location.href="./shopping-list.html",n.classList.add("current")})),document.querySelector(".home-btn").addEventListener("click",(function(e){window.location.href="./index.html"}))}();
+//# sourceMappingURL=shopping-list.c0e2e045.js.map
