@@ -73,6 +73,10 @@
   color: #FFFFFF;
   background-color: $color-accent-purple;
 }
+.bestseller-button-container .bestseller-see-more:focus {
+  color: #FFFFFF;
+  background-color: $color-accent-purple;
+}
 .bestseller-header {
   margin-top: 0;
   margin-bottom: 40px;
@@ -151,6 +155,9 @@
 }
 
 .bestseller-card-link:hover .bestseller-hover-button {
+  opacity: 1;
+}
+.bestseller-card-link:focus .bestseller-hover-button {
   opacity: 1;
 }
 .bestseller-card-thumb {
@@ -323,6 +330,9 @@
 }
 
 .category-card-link:hover .category-hover-button {
+  opacity: 1;
+}
+.category-card-link:focus .category-hover-button {
   opacity: 1;
 }
 .category-card-set-item{
