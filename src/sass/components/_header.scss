@@ -1,5 +1,5 @@
 /* Хедер */
-*{
+* {
   margin: 0 auto;
 }
 header {
@@ -225,14 +225,12 @@ header {
     svg {
       position: absolute;
       margin-left: 4px;
-      stroke: black;
+      // stroke: black;
     }
 
     &:hover {
       background-color: #eac645;
     }
-
-    
   }
 }
 
@@ -266,12 +264,12 @@ header {
     opacity: 0;
     overflow: hidden;
   }
-    .buttons__container {
-      display: flex;
-      gap: 16px;
-      margin-left: 40px;
-      margin-top: 19px;
-    }
+  .buttons__container {
+    display: flex;
+    gap: 16px;
+    margin-left: 40px;
+    margin-top: 19px;
+  }
 }
 
 /* Mobile */
@@ -397,9 +395,9 @@ header {
     display: flex;
   }
 
-    .buttons__container {
-      display: none;
-      opacity: 0;
-      overflow: hidden;
-    }
+  .buttons__container {
+    display: none;
+    opacity: 0;
+    overflow: hidden;
+  }
 }
