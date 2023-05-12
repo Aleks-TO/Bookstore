@@ -1,2 +1,0 @@
-const e=document.querySelector(".burger-menu"),t=document.querySelector(".modal-overlay");document.querySelector(".close-icon");e.addEventListener("click",(function(){t.classList.toggle("show")}));const o=document.querySelector(".shoplist-btn");o.addEventListener("click",(e=>{window.location.href="./shopping-list.html",o.classList.add("current")}));document.querySelector(".home-btn").addEventListener("click",(e=>{window.location.href="./index.html"}));
-//# sourceMappingURL=shopping-list.f0194be0.js.map
