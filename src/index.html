@@ -34,20 +34,26 @@
     <!-- end favicon -->
   </head>
   <body>
+    <div class="wrapper">
+      <include src="./partials/header.html"></include>
+    </div>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/header.html"></include>
 
     <main>
-      <div class="container">
-        <section class="sidebar-left">
-          <include src="./partials/sidebar.html"></include>
-          <include src="./partials/support.html"></include>
-        </section>
-        <section class="bestseller-container">
-          <include src="./partials/bestseller.html"></include>
-        </section>
+      <div class="wrapper">
+        <div class="container">
+          <section class="sidebar-left">
+            <include src="./partials/sidebar.html"></include>
+            <include src="./partials/support.html"></include>
+          </section>
+          <section class="bestseller-container">
+            <include src="./partials/bestseller.html"></include>
+          </section>
+        </div>
+        <include src="./partials/scrollup.html"></include>
+
       </div>
-      <include src="./partials/scrollup.html"></include>
+
 
    </main>
 

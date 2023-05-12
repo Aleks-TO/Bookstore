@@ -80,9 +80,9 @@ renderList(supportUkraine);
 bntEl.addEventListener('click', onClickBnt);
 function onClickBnt() {
   offset += 52;
-  if (offset > 280 && screen.availWidth <= 375) {
+  if (offset > 260 && screen.availWidth <= 768) {
     offset = 0;
-  } else if (offset > 180 && screen.availWidth > 375) {
+  } else if (offset > 156 && screen.availWidth > 768) {
     offset = 0;
   }
   olEl.style.bottom = offset + 'px';
