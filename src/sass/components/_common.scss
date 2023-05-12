@@ -33,6 +33,10 @@ main {
   padding: 0 24px;
 }
 
+.wrapper{
+  margin: 0 auto
+}
+
 // COMPONENTS
 
 .button {
@@ -114,6 +118,17 @@ main {
   .description {
     color: $color-light;
   }
+
+  .btn-home {
+    color: $color-light;
+  }
+
+  .btn-shop {
+    color: $color-light;
+    fill: $color-light;
+  }
+
+
 }
 
 // лейаут для Index html
@@ -172,4 +187,7 @@ main {
   &:hover {
     transform: scale(1.2);
   }
+
+
+
 }
