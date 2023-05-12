@@ -147,6 +147,11 @@
   overflow: hidden;
 }
 
+
+@media screen and (min-width: 768px) {
+  .support_Ukraine_list {
+    margin-bottom: 40px;
+
 .icon-arrow-back-ios-rounded {
   display: flex;
   justify-content: center;
@@ -175,10 +180,18 @@
 
 @media screen and (min-width: 375px) {
   .support_Ukraine_list {
+
     height: 292px;
   }
 }
-
+.icon-arrow-back-ios-rounded {
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  width: 20px;
+  height: 20px;
+  fill: #4f2ee8;
+}
 .icon-arrow-back-ios-rounded {
   display: flex;
   justify-content: center;
@@ -189,13 +202,23 @@
 }
 
 .support__img {
-  max-width: 115px;
+  max-width: 145px;
   max-height: 32px;
   padding-left: 28px;
-  margin-bottom: 18px;
+
+  margin-bottom: 19px;
 
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(350%)
     contrast(500%);
+}
+
+.icon-arrow-back-ios-rounded {
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  width: 20px;
+  height: 20px;
+  fill: #4f2ee8;
 }
 
 .support__img:hover {
@@ -215,7 +238,6 @@
   line-height: 18px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   transform: translateY(-20px);
   color: #ffffff;
 }
