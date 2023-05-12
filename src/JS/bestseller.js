@@ -147,7 +147,11 @@ function onClickBestseller(event) {
 
       document.addEventListener('keydown', funHelp);
 
-      if (localStorage.getItem(book._id) === null) {
+      bookModal.shopList = JSON.parse(
+        localStorage.getItem(bookModal.KEY_SHOP_LIST)
+      );
+
+      if (bookModal.shopList === null || !bookModal.has(book._id)) {
         shoppingBtn.textContent = 'add to shopping list';
         shoppingBtn.nextElementSibling.style.display = 'none';
       } else {
@@ -164,6 +168,11 @@ function onClickBestseller(event) {
         buy_links: book.buy_links,
       };
 
+      if (bookModal.shopList === null) {
+        bookModal.shopList = {};
+        bookModal.shopList[book._id] = shoppingBtn.settingsBook;
+      } else if (bookModal.has(book._id)) {
+      }
       // shoppingBtn.settingsBook = settingsBook;
 
       shoppingBtn.addEventListener('click', onClickShoppingBtn);
@@ -183,15 +192,60 @@ function onClickBestseller(event) {
     }
 
     function onClickShoppingBtn(event) {
-      console.log(event.target.settingsBook);
+      // console.log(event.target.settingsBook);
+      const selectBook = event.target.settingsBook;
+      bookModal.shopList = JSON.parse(
+        localStorage.getItem(bookModal.KEY_SHOP_LIST)
+      );
 
-      if (localStorage.getItem(event.target.settingsBook.id) === null) {
+      if (bookModal.shopList === null) {
+        bookModal.shopList = {};
+      }
+      console.log('bookModal.shopList: ', bookModal.shopList);
+      console.log(Object.keys(bookModal.shopList).length);
+      if (
+        bookModal.shopList === null ||
+        Object.keys(bookModal.shopList).length === 0
+      ) {
+        bookModal.shopList = {};
+        bookModal.shopList[selectBook.id] = selectBook;
         localStorage.setItem(
-          event.target.settingsBook.id,
-          JSON.stringify(event.target.settingsBook)
+          bookModal.KEY_SHOP_LIST,
+          JSON.stringify(bookModal.shopList)
+        );
+        onCloseModal();
+        return;
+      } else if (bookModal.has(selectBook.id)) {
+        if (localStorage.getItem(bookModal.KEY_SHOP_LIST) === null) {
+          localStorage.setItem(
+            bookModal.KEY_SHOP_LIST,
+            JSON.stringify(bookModal.shopList)
+          );
+          onCloseModal();
+          return;
+        }
+        bookModal.shopList = JSON.parse(
+          localStorage.getItem(bookModal.KEY_SHOP_LIST)
+        );
+        delete bookModal.shopList[selectBook.id];
+        localStorage.setItem(
+          bookModal.KEY_SHOP_LIST,
+          JSON.stringify(bookModal.shopList)
+        );
+      } else if (!bookModal.has(selectBook.id)) {
+        bookModal.shopList = JSON.parse(
+          localStorage.getItem(bookModal.KEY_SHOP_LIST)
+        );
+        bookModal.shopList[selectBook.id] = selectBook;
+        localStorage.setItem(
+          bookModal.KEY_SHOP_LIST,
+          JSON.stringify(bookModal.shopList)
         );
       } else {
-        localStorage.removeItem(event.target.settingsBook.id);
+        localStorage.setItem(
+          bookModal.KEY_SHOP_LIST,
+          JSON.stringify(bookModal.shopList)
+        );
       }
       onCloseModal();
     }
