@@ -183,6 +183,8 @@ main {
   }
 }
 
+// shopping сторінка
+
 .wrapper{
   margin: 0 auto;
 }
@@ -192,6 +194,33 @@ main {
   flex-direction: row;
   gap: 40px;
 }
+
+@media screen and (max-width: 767px) {
+  .shopping-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .support_Ukraine{
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .shopping-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 40px;
+
+  }
+
+  .support_Ukraine{
+    display: none;
+  }
+}
+
 
 ul, .shoping-list-ul, .shoping-list-ul2{
   padding-right: 0;
