@@ -145,7 +145,7 @@
 import saveTheChildren from '../images/icons-img/books.png';
 import linkBook from '../images/icons-img/book.png';
 import linkAmazon from '../images/icons-img/amazon.png';
-import closeSvg from '../images/img-symbols/symbol-defs.svg#icon-basket';
+import closeSvg from '../images/trash.svg';
 
 const arr = Object.values(JSON.parse(localStorage.getItem("BOOKSTORE_SHOP_LIST")))
 const ulEl = document.querySelector('.shoping-list-ul2');
@@ -206,9 +206,12 @@ function renderList(arr) {
 }
 
 renderList(arr);
-const bntEl = document.querySelector('.shopping-list-delete-book-bnt');
+const shopcont = document.querySelector(".shoping-list")
+const bntEl = shopcont.querySelector('.shopping-list-delete-book-bnt');
+
 bntEl.addEventListener('click', deleteBook);
 
-function deleteBook() {
+function deleteBook(event) {
+ 
   //видалити з локал сторедж
 }
